@@ -1,0 +1,63 @@
+.console{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;   
+    z-index: 2;
+}
+
+.consoleHistory{
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 5vh;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.consoleInputLog,
+.consoleOutputLog{
+    box-sizing: border-box;
+    padding: 0.5vh 1vh;
+    z-index: 2;
+}
+
+.consoleInputLog:hover,
+.consoleOutputLog:hover{
+    background-color: #cecece;
+    z-index: 2;
+}
+
+.consoleInputLog{
+    color:black;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 2;
+}
+
+.consoleOutputLog{
+    color: rgb(28, 194, 72);
+    font-weight: bold;
+    font-style: italic;
+    z-index: 2;
+}
+
+.consoleInput{
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 1vh;
+    outline: none;
+    border: none;
+    border-top: 1px solid #a3a3a3;
+    color:black;
+    background-color: #e4e4e4;
+    transition: background-color 0.5s;
+    z-index: 2;
+}
+
+.consoleInput:hover, 
+.consoleInput:focus
+{
+    background-color: #cecece;
+    transition: background-color 0.5s;
+    z-index: 2;
+}
