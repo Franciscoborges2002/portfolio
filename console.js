@@ -5,8 +5,12 @@ let howManyAppendedInput = 0;
 let howManyAppendedoOutput = 0;
 
 const helpText = "If you want more specific help to a command type 'help {commandName}'.";
-const clsText = "cls/clear      clear the console";
-const a = "a";
+const clsHelpText = "cls/clear clear the console";
+const aboutHelpText = "about  About section of the main page";
+const linksHelpText = "links get the links."
+
+const aboutText = "So as you already know, my name is Francisco, bla bla bla";
+const linksText = "LinkedIn | Github";
 const pingText = "pong";
 
 function addResult(inputAsString, output){
@@ -22,6 +26,7 @@ function addResult(inputAsString, output){
 
     historyContainer.append(inputLogElement, outputLogElement);
     howManyAppendedInput++;
+    howManyAppendedoOutput++;
 }
 
 function addOutput(output){
@@ -32,6 +37,39 @@ function addOutput(output){
     outputLogElement.textContent = output;
 
     historyContainer.append(outputLogElement);
+    howManyAppendedoOutput++;
+}
+
+function addLinks(inputAsString){
+    var aGitHub = document.createElement('a');
+    var aLinkedIn = document.createElement('p');
+    const inputLogElement = document.createElement('div');
+    const outputLogElementGitHub = document.createElement('div');
+    const outputLogElementLinkedIn = document.createElement('div');
+
+    var linkTextLinkedIn = document.createTextNode("LinkedIn");
+    aLinkedIn.appendChild(linkTextLinkedIn);
+    aLinkedIn.title = "LinkedIn";
+    aLinkedIn.target = "blank_";
+    aLinkedIn.href="https://google.com";
+
+    var linkTextGitHub = document.createTextNode("GitHub");
+    aGitHub.appendChild(linkTextGitHub);
+    aGitHub.title = "github";
+    aGitHub.target = "blank_";
+    aGitHub.href="https://github.com/Franciscoborges2002";
+
+    inputLogElement.classList.add("consoleInputLog");
+    outputLogElementGitHub.classList.add("consoleOutputLog");
+
+    inputLogElement.textContent = `$ ${inputAsString}`
+
+    outputLogElementGitHub.appendChild(aGitHub);
+    outputLogElementLinkedIn.appendChild(aLinkedIn);
+
+    historyContainer.append(inputLogElement, outputLogElementGitHub, outputLogElementLinkedIn);
+    howManyAppendedInput++;
+    howManyAppendedoOutput++;
 }
 
 function javascriptify(code){
@@ -40,7 +78,15 @@ function javascriptify(code){
     switch(code.toLowerCase()){
         case 'help':
             addResult(code, helpText);
-            addOutput(clsText);
+            addOutput(clsHelpText);
+            addOutput(aboutHelpText);
+            addOutput(linksHelpText);
+        break;
+        case 'about':
+            addResult(code, aboutText);
+        break;
+        case 'links':
+            addLinks();
         break;
         case 'cls':
             clearConsole();
@@ -58,13 +104,16 @@ function javascriptify(code){
 }
 
 function clearConsole(){
-    for(var i = 0; i < howManyAppended; i++){
+    for(var i = 0; i < howManyAppendedInput; i++){
         historyContainer.removeChild(document.querySelector(".consoleInputLog"));
-        historyContainer.removeChild(document.querySelector(".consoleOutputLog"));
+    }
+
+    for(var i = 0; i < howManyAppendedoOutput; i++){
         historyContainer.removeChild(document.querySelector(".consoleOutputLog"));
     }
 
-    howManyAppended = 0;
+    howManyAppendedInput = 0;
+    howManyAppendedoOutput = 0;
 }
 
 consoleInput.addEventListener('keyup', (event) =>{
@@ -75,11 +124,6 @@ consoleInput.addEventListener('keyup', (event) =>{
     }
 
     if(event.key === "Enter"){
-        /* try {
-            addResult(code, javascriptify(code));
-        } catch (error) {
-            addResult(code, error);
-        } */
         javascriptify(code);
     }
 })
