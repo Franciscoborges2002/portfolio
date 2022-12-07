@@ -52,11 +52,6 @@ h1{
     flex-direction: row;
 }
 
-.project img {
-    width: 20%;
-    height: 100%;
-}
-
 #console{
     display: flex;
     justify-content: flex-end;
@@ -125,11 +120,6 @@ footer{
         display: flex;
         flex-direction: row;
     }
-    
-    .project img {
-        width: 20%;
-        height: 110%;
-    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -169,29 +159,26 @@ footer{
     }
 
     .projects h3{
-        font-size: small;
+        font-size: medium;
     }
 
     .projects h4{
-        font-size: x-small;
+        font-size: small;
     }
 
     .projects p{
-        font-size: xx-small;
+        font-size: x-small;
     }
 
     .projects .linkPart{
-        font-size: x-small;
+        font-size: small;
     }
     
     .project{
-        height: 50px;
+        height: 100px;
         display: flex;
         flex-direction: row;
-    }
-    
-    .project img {
-        width: 20%;
-        height: 110%;
+        padding-left: 16px;
     }
 }
+

@@ -48,7 +48,7 @@ function addLinks(inputAsString){
     const outputLogElementLinkedIn = document.createElement('div');
 
     var linkTextLinkedIn = document.createTextNode("LinkedIn");
-    aLinkedIn.appendChild(linkTextLinkedIn);
+    aLinkedIn.appendChild(+);
     aLinkedIn.title = "LinkedIn";
     aLinkedIn.target = "blank_";
     aLinkedIn.href="https://google.com";
