@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./src/styles/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./src./styles/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/styles/index.css'>
     <script src='../scripts/main.js'></script>
 </head>
 <body>
@@ -16,37 +16,54 @@
             <h1>FRANCISCO</h1>
         </div>
         
-        <img src="./public/images/profilePhoto.jpg">
+        <div class="boarderImg">
+            <img src="public/images/profilePhoto.jpg">
+        </div>
     </div>
 
     <div id="topics">
-        <div class="about">
+        <div id="about">
             <h2>About</h2>
             <p>
                 So as you already know, my name is Francisco, bla bla bla
             </p>
         </div>
-        <div class="letsLink">
+        <div id="letsLink">
             <h2>Let's Link</h2>
             <ul>
                 <li>
-                    <a href="">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/francisco-borges-29abaa1a5/" target="blank_">LinkedIn</a>
                 </li>
                 <li>
                     <a href="https://github.com/Franciscoborges2002" target="blank_">Github</a>
                 </li>
             </ul>
         </div>
-        <div class="projects">
+        <div id="projects">
             <h2>Projects</h2>
             <div class="project">
                 <div class="infoProject">
-                   <h3>Aurora</h3>
-                   <p>Uma plataforma para dares host ao teu evento de vídeo</p>
+                   <h3>PomoCore</h3>
+                   <p>Website para usar técnica de pomodoro em tarefas.</p>
                    <h4>Tech used:</h4>
-                   <p>oi</p>
+                   <div class="techUsed">
+                        <p>Vue.js | </p>
+                   </div>
                    <div class="linkPart">
                         <a href="https://github.com/Franciscoborges2002/Aurora" target="_blank">Github</a> | <a href="">Live Preview</a>
+                   </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="infoProject">
+                   <h3>bolsasEstudo.pt</h3>
+                   <p>Website para conseguir ver quais ass bolsas de estudo ativas em Portugal.</p>
+                   <h4>Tech used:</h4>
+                   <div class="techUsed">
+                        <p>Vue.js | Typescript</p>
+                    </div>
+                   <div class="linkPart">
+                        <a href="https://github.com/Franciscoborges2002/bolsasEstudo.pt" target="_blank">Github</a> | <a href="">Live Preview</a>
                    </div>
                 </div>
             </div>
@@ -55,7 +72,9 @@
                    <h3>Shortty</h3>
                    <p>Website para conseguires encurtar urls </p>
                    <h4>Tech used:</h4>
-                   <p>oi</p>
+                   <div class="techUsed">
+                        <p>Vue.js | </p>
+                    </div>
                    <div class="linkPart">
                         <a href="https://github.com/Franciscoborges2002/Shortty" target="_blank">Github</a> | <a href="">Live Preview</a>
                    </div>
@@ -66,14 +85,19 @@
                    <h3>Ganbat</h3>
                    <p>Uma plataforma </p>
                    <h4>Tech used:</h4>
-                   <p>oi</p>
+                   <div class="techUsed">
+                        <p>Vue.js | </p>
+                    </div>
                    <div class="linkPart">
                         <a href="https://github.com/Franciscoborges2002/Aurora" target="_blank">Github</a> | <a href="">Live Preview</a>
                    </div>
                 </div>
             </div>
+            <div class="moreProjects">
+                <a href="src/pages/projects.html" class="moreProjectsLink">And even more projects...</a>
+            </div>
         </div>
-        <div class="articles">
+        <div id="articles">
             <h2>Articles</h2>
             <ul>
                 <li>
@@ -88,9 +112,15 @@
             </ul>
         </div>
     </div>
-    <a id="console" href="./console.html">Console</a>
+        
     <footer>
-        <p>™</p>
+        <!-- <a id="console" href="#about">About</a>
+        <a id="console" href="#letsLink">Let's Link</a>
+        <a id="console" href="#projects">Projects</a>
+        <a id="console" href="#articles">Articles</a> -->
+        <a id="console" href="./src/pages/console.html">Console</a>
     </footer>
+
+    <script src="./src/scripts/index.js"></script>
 </body>
 </html>

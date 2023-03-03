@@ -48,7 +48,7 @@ function addLinks(inputAsString){
     const outputLogElementLinkedIn = document.createElement('div');
 
     var linkTextLinkedIn = document.createTextNode("LinkedIn");
-    aLinkedIn.appendChild(+);
+    /* aLinkedIn.appendChild(+); */
     aLinkedIn.title = "LinkedIn";
     aLinkedIn.target = "blank_";
     aLinkedIn.href="https://google.com";
@@ -77,6 +77,7 @@ function javascriptify(code){
 
     switch(code.toLowerCase()){
         case 'help':
+            console.log("adsasd")
             addResult(code, helpText);
             addOutput(clsHelpText);
             addOutput(aboutHelpText);
@@ -123,7 +124,7 @@ consoleInput.addEventListener('keyup', (event) =>{
         return;
     }
 
-    if(event.key === "Enter"){
+    if(event.key === 'Enter' || event.keyCode === 13){
         javascriptify(code);
     }
 })

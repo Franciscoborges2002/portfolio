@@ -16,12 +16,6 @@ h1{
     font-size: xx-large;
 }
 
-#header img{
-    border-radius: 50%;
-    width: 20vw;
-    height: 10vh;
-}
-
 #header{
     margin-top: 8vh;
     display: flex;
@@ -31,12 +25,31 @@ h1{
     gap: 3vh;
 }
 
+#header .boarderImg{
+    border-radius: 50%;
+    width: 8vw;
+    height: 15vh;
+    background-color: rgb(189, 189, 189);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .boarderImg img{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(75, 75, 75);
+    border-radius: 50%;
+    width: 7.5vw;
+    height: 14.2vh;
+}
+
 #topics{
     margin-top: 5vh;
     margin-left: 10vh;
 }
 
-.about p {
+#about p {
     margin: 0.5vh;
     text-indent: 16px;/* Make the text go  */
 }
@@ -45,18 +58,18 @@ ul{
     list-style-type: none;
 }
 
-.letsLink ul,
-.articles ul{
+#letsLink ul,
+#articles ul{
     padding-left: 16px;
 }
 
-.projects{
+#projects{
     display: flex;
     flex-direction: column;
     gap: 2vh;
 }
 
-.project{
+#project{
     display: flex;
     flex-direction: row;
     padding-left: 16px;
@@ -71,7 +84,13 @@ footer{
     position: fixed;
     bottom: 0px;
     justify-content: center;
+    bottom: 0;
+    right: 0;
+}
 
+.infoProject p{
+    padding-left: 16px;
+    font-size: small;
 }
 
 @media only screen and (min-width: 300px) {
