@@ -1,0 +1,41 @@
+.container{
+    padding-left: 5vw;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-top: 3vh;
+    padding-left: 1vw;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+.project .titleProject{
+    padding-left: 1vw;
+}
+
+.project .infoProject{
+    padding-left: 2vw;
+}
+
+.project .infoProject p{
+    padding-left: 1vw;
+}
+
+.project .linkPart{
+    padding-top: 1.5vh;
+}
+
+.project:hover{
+    width: 95%;
+    height: 100%;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    background-color: lightgray;
+    transition: all 0.4s ease-in-out;
+}
