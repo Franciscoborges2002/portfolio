@@ -1,3 +1,7 @@
+.main{
+    margin-top: 10vh;
+    margin-bottom: 5vh; 
+}
 
 p{
     font-size: medium;
@@ -17,7 +21,6 @@ h1{
 }
 
 #header{
-    margin-top: 8vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,6 +94,27 @@ footer{
 .infoProject p{
     padding-left: 16px;
     font-size: small;
+}
+
+#topPart{
+    transform: scale(2);
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+#buttonChangeColor{
+    cursor: pointer;
+    border: 0px;
+    background-color: rgb(189, 189, 189, 0);
+}
+
+img{
+    transition: all 1s;
+}
+
+img:hover{
+    transform: scale(0.8);
 }
 
 @media only screen and (min-width: 300px) {
