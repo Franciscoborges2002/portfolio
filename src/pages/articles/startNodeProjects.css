@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.greenBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  font-size: small;
+  padding-left: 0.75rem; /* Este valor é derivado de "px-3" */
+  padding-right: 0.75rem; /* Este valor é derivado de "px-3" */
+  background-color: #bbf7d0; /* Cor cinza (#E5E7EB é equivalente a bg-gray-200) */
+  color: #1f2937; /* Cor do texto (#1F2937 é equivalente a text-gray-800) */
+  border-radius: 9999px; /* Esta é a definição para "rounded-full" */
+}
