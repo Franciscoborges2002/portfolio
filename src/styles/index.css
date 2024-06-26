@@ -159,6 +159,26 @@ h2,
   overflow-x: hidden;
 }
 
+.contact-form-inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 50%;
+  padding-left: 16px;
+}
+
+.contact-form-name, .contact-form-email, .contact-form-message{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+#contact, #articles, #timeline{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
 @media only screen and (min-width: 300px) {
   p {
     font-size: small;

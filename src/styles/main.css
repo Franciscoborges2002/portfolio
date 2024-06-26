@@ -29,3 +29,8 @@ a {
   color: #0000ee;
   transition: 0.5s;
 }
+
+textarea {
+  width: 100%;
+  resize: none;
+}
