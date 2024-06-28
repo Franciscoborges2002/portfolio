@@ -57,3 +57,12 @@
     color: #1F2937; /* Cor do texto (#1F2937 é equivalente a text-gray-800) */
     border-radius: 9999px; /* Esta é a definição para "rounded-full" */
 }
+
+.dateProject{
+    display: flex;
+    flex-direction: row;
+}
+
+.dateProject p{
+    font-size: small;
+}
