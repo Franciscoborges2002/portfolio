@@ -179,6 +179,12 @@ h2,
   gap: 1vh;
 }
 
+.topisContent{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 @media only screen and (min-width: 300px) {
   p {
     font-size: small;
