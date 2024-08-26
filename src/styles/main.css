@@ -19,7 +19,6 @@ body {
   transition: 0.5s;
 }
 
-
 .darkMode a {
     color: #7a12db;
     transition: 0.5s;
@@ -33,4 +32,14 @@ a {
 textarea {
   width: 100%;
   resize: none;
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }

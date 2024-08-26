@@ -23,15 +23,15 @@ addEventListener("load", (event) => {
     if (localStorage.getItem("darkMode") === null) {
       //if doesnt have drakMode in localStorage
       localStorage.setItem("darkMode", false);
-      icon.src = "./src/icons/moon.svg";
+      icon.src = "../../public/icons/sun.svg";
     } else {
       //if already has the darkMode in localStorage
       if (localStorage.getItem("darkMode") === "true") {
         //if darkMode is true
         element.classList.toggle("darkMode");
-        icon.src = "./src/icons/sun.svg";
+        icon.src = "../../public/icons/sun.svg";
       } else {//if darkmode is false
-        icon.src = "./src/icons/moon.svg";
+        icon.src = "../../public/icons/moon.svg";
       }
     }
   }
@@ -47,16 +47,39 @@ buttonChangeColor.addEventListener("click", () => {
       //if darkMode is true
       element.classList.toggle("darkMode");
       localStorage.setItem("darkMode", false);
-      icon.src = "./src/icons/moon.svg";
+      icon.src = "../../public/icons/moon.svg";
     } else {
       //if darkMode is false
       element.classList.toggle("darkMode");
       localStorage.setItem("darkMode", true);
-      icon.src = "./src/icons/sun.svg";
+      icon.src = "../../public/icons/sun.svg";
     }
 
     return;
   }
 
   element.classList.toggle("darkMode");
+});
+
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  const userLang = localStorage.getItem("language");
+
+  // Função para carregar o ficheiro JSON
+  fetch(`../../public/languages/${userLang}.json`)
+      .then(response => response.json())
+      .then(data => {
+          // Substituir o texto na página com base no JSON carregado
+          document.getElementById("introductionText").innerText = data.introductionText;
+          document.getElementById("aboutTitle").innerText = data.aboutTitle;
+          document.getElementById("letsConnectTitle").innerText = data.letsConnectTitle;
+          document.getElementById("projectsTitle").innerText = data.projectsTitle;
+          document.getElementById("articlesTitle").innerText = data.articlesTitle;
+          document.getElementById("contactTitle").innerText = data.contactTitle;
+
+          //Set texts on the page
+          document.getElementById("moreProjectsText").innerText = data.moreProjectsText;
+          //moreProjectsText
+      })
+      .catch(error => console.error('Erro ao carregar o ficheiro JSON:', error));
 });

@@ -4,19 +4,14 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="icon" type="image/x-icon" href="./public/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="./public/images/favicon.ico"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon-16x16.png">
   <title>Francisco Borges</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" media="screen" href="./src/styles/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./src/styles/index.css" />
-  <script src="../scripts/main.js"></script>
-</head>
 
-<body>
-
-</body>
-
-</html>
 </head>
 
 <body>
@@ -28,7 +23,7 @@
     </div>
     <div id="header">
       <div class="introductionPart">
-        <p class="introductionText">Hi, I'm</p>
+        <p class="introductionText" id="introductionText">Hi, I'm</p>
         <h1>FRANCISCO</h1>
       </div>
 
@@ -39,7 +34,7 @@
 
     <div id="topics">
       <div id="about">
-        <h2>About</h2>
+        <h2 id="aboutTitle">About</h2>
         <div class="topisContent">
           <p>
             So as you already know, my name is Francisco. From an early age, I discovered my passion for technology when
@@ -62,8 +57,8 @@
 
       </div>
       <div id="letsLink">
-        <h2>Let's Link</h2>
-        <ul>
+        <h2 id="letsLinkTitle">Let's Link</h2>
+        <ul class="letLinkContent">
           <li>
             <a href="https://www.linkedin.com/in/francisco-borges-29abaa1a5/" target="blank_">LinkedIn</a>
           </li>
@@ -73,10 +68,13 @@
           <li>
             <a href="https://codepen.io/franciscoborges2002" target="blank_">Codepen</a>
           </li>
+          <li>
+            <a href="https://www.youtube.com/@franciscoborges7897" target="blank_">Youtube</a>
+          </li>
         </ul>
       </div>
       <div id="projects">
-        <h2>Projects</h2>
+        <h2 id="projectsTitle">Projects</h2>
         <div class="project">
           <div class="infoProject">
             <h3>PomoCore</h3>
@@ -105,10 +103,10 @@
           </div>
         </div>
         <div>
-          <a href="src/pages/projects.html">More projects...</a>
+          <a href="projects.html" id="moreProjectsText">More projects...</a>
         </div>
       </div>
-      <div id="timeline">
+      <!-- <div id="timeline">
         <h2>Timeline</h2>
         <div class="scrollable-div">
           <div class="lines">
@@ -137,9 +135,9 @@
           </div>
         </div>
 
-      </div>
-      <div id="articles">
-        <h2>Articles</h2>
+      </div> -->
+      <!-- <div id="articles">
+        <h2 id="articlesTitle">Articles</h2>
         <ul class="articles">
           <li>
             <a href="">How to connect to a server via SSH tunnel</a>
@@ -154,9 +152,9 @@
         <div>
           <a href="src/pages/articles.html">More Articles...</a>
         </div>
-      </div>
+      </div> -->
       <div id="contact">
-        <h2>Contact</h2>
+        <h2 id="contactTitle">Contact</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
           <div class="contact-form-inputs">
 
@@ -190,6 +188,7 @@
       </footer>
     </div>
 
+    <script src="./src/scripts/main.js"></script>
     <script src="./src/scripts/index.js"></script>
 </body>
 

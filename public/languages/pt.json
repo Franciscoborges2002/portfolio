@@ -1,9 +1,11 @@
 {
-    "introduction": "Olá, eu sou o",
-    "sobre": "Sobre",
-    "textoSobre": "Olá ",
-    "projetos": "Projectos",
-    "techUsada": "Tech usada:",
-    "maisProjetos": "Mais Projetos...",
-    "Artigos": "Artigos"
+    "introductionText": "Olá, eu sou o",
+    "aboutTitle": "Sobre",
+    "aboutText": "Olá ",
+    "letsConnectTitle": "Vamos nos conectar",
+    "projectsTitle": "Projectos",
+    "usedTech": "Tech usada:",
+    "moreProjectsText": "Mais Projetos...",
+    "articlesTitle": "Artigos",
+    "contactTitle": "Contacta-me"
 }

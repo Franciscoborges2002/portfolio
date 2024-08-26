@@ -2,6 +2,16 @@
     padding-left: 5vw;
 }
 
+h1{
+    padding-top: 30px;
+}
+
+.backOption{
+    top: 10px;
+    left: 10px;
+    position: fixed;
+}
+
 #projects{
     display: flex;
     flex-direction: column;
@@ -13,10 +23,23 @@
 .project{
     display: flex;
     flex-direction: column;
+    transition: all 0.5s;
+}
+
+.project:hover{
+    background-color: #d4d4d4;
+    padding: 20px;
+    border-radius: 2vh 0vh 0vh 2vh;
 }
 
 .project .titleProject{
     padding-left: 1vw;
+    
+}
+.infoProject{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }
 
 .project .infoProject{
@@ -56,6 +79,31 @@
     background-color: #bbf7d0; /* Cor cinza (#E5E7EB é equivalente a bg-gray-200) */
     color: #1F2937; /* Cor do texto (#1F2937 é equivalente a text-gray-800) */
     border-radius: 9999px; /* Esta é a definição para "rounded-full" */
+    cursor: pointer;
+}
+
+.redBadge{
+    padding-top: 0.1em;
+    padding-bottom: 0.1rem;
+    font-size: small;
+    padding-left: 0.75rem; /* Este valor é derivado de "px-3" */
+    padding-right: 0.75rem; /* Este valor é derivado de "px-3" */
+    background-color: #f7d6bb; /* Cor cinza (#E5E7EB é equivalente a bg-gray-200) */
+    color: #1F2937; /* Cor do texto (#1F2937 é equivalente a text-gray-800) */
+    border-radius: 9999px; /* Esta é a definição para "rounded-full" */
+    cursor: pointer;
+}
+
+.blueBadge{
+    padding-top: 0.1em;
+    padding-bottom: 0.1rem;
+    font-size: small;
+    padding-left: 0.75rem; /* Este valor é derivado de "px-3" */
+    padding-right: 0.75rem; /* Este valor é derivado de "px-3" */
+    background-color: #bbf0f7; /* Cor cinza (#E5E7EB é equivalente a bg-gray-200) */
+    color: #1F2937; /* Cor do texto (#1F2937 é equivalente a text-gray-800) */
+    border-radius: 9999px; /* Esta é a definição para "rounded-full" */
+    cursor: pointer;
 }
 
 .dateProject{
@@ -65,4 +113,22 @@
 
 .dateProject p{
     font-size: small;
+}
+
+.infoProjectMiddle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.descriptionProject{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h3{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
 }
