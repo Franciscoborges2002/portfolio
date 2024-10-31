@@ -211,6 +211,46 @@ h2,
   gap:5px;
 }
 
+#skills{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.skillCards{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  font-size: xx-small;
+}
+
+.skillCards{
+  padding-left: 16px;
+}
+
+.skillCardWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+}
+
+.skill p{
+  font-weight: 600;
+}
+
+.skill{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.techIcon{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 300px) {
   p {
     font-size: small;

@@ -20,8 +20,8 @@ body {
 }
 
 .darkMode a {
-    color: #7a12db;
-    transition: 0.5s;
+  color: #7a12db;
+  transition: 0.5s;
 }
 
 a {
@@ -42,4 +42,94 @@ footer {
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+.greenBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 10px;
+  font-size: small;
+  background-color: #bbf7d0;
+  color: #1f2937;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.greenBadge:hover {
+  background-color: #9dffbf;
+}
+
+.redBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 10px;
+  font-size: small;
+  background-color: #f7d6bb;
+  color: #1f2937;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.redBadge:hover {
+  background-color: #ff9d9d;
+}
+
+
+.blueBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 10px;
+  font-size: small;
+  background-color: #bbf0f7;
+  color: #1f2937;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.blueBadge:hover {
+  background-color: #9debff;
+}
+
+.orangeBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 10px;
+  font-size: small;
+  background-color: #f7e4bb;
+  color: #1f2937;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.orangeBadge:hover {
+  background-color: #ffe09d;
+}
+
+.yellowBadge {
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding: 10px;
+  background-color: #f7f1bb;
+  color: #1f2937;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.yellowBadge:hover {
+  background-color: #fffd9d;
 }
