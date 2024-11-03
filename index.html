@@ -28,13 +28,22 @@
 </head>
 
 <body>
-  <div class="main">
-    <div id="topPart">
-      <!-- <button id="buttonChangeColor">
-        <img id="darkModeEnabler" />
-      </button> -->
-    </div>
-    <div id="header">
+  <header>
+    <!-- <button id="buttonChangeColor">
+      <img id="darkModeEnabler" />
+    </button> -->
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/articles.html">Articles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HEADER MAIN -->
+    <section id="headerIntroduction">
       <div class="introductionPart">
         <p class="introductionText" id="introductionText">Hi, I'm</p>
         <h1>FRANCISCO</h1>
@@ -43,187 +52,186 @@
       <div class="boarderImg">
         <img src="./public/images/profilePhoto.png" />
       </div>
-    </div>
+    </section>
 
-    <div id="topics">
-      <div id="about">
-        <h2 id="aboutTitle">About</h2>
-        <div class="topisContent">
-          <p>
-            So as you already know, my name is Francisco. My passion for technology ignited at a young age when I
-            started to understood the essence of what a computer truly is. Before i got into university, I start
-            learning programming and embarked on creating small projects and doing some automation on my daily tasks.
-            Over time, these early efforts allowed me to hone my skills, progressively tackling more complex projects
-            with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to expand my knowledge.
-          </p>
-          <!-- <p>
-            In addition to my passion for technology, I have a strong entrepreneurial spirit. I continuously develop
-            personal projects with the goal of generating income. This drive to innovate and create solutions not only
-            fuels my passion but also pushes me to explore new avenues for financial success. My entrepreneurial
-            endeavors
-            allow me to apply my technical skills in practical ways, turning ideas into tangible results and constantly
-            seeking opportunities to grow and succeed in the competitive tech landscape.
-          </p> -->
-        </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 id="aboutTitle">About</h2>
+      <div class="topisContent">
+        <p>
+          So as you already know, my name is Francisco. My passion for technology ignited at a young age when I
+          started to understood the essence of what a computer truly is. Before i got into university, I start
+          learning programming and embarked on creating small projects and doing some automation on my daily tasks.
+          Over time, these early efforts allowed me to hone my skills, progressively tackling more complex projects
+          with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to expand my
+          knowledge.
+        </p>
+        <!-- <p>
+              In addition to my passion for technology, I have a strong entrepreneurial spirit. I continuously develop
+              personal projects with the goal of generating income. This drive to innovate and create solutions not only
+              fuels my passion but also pushes me to explore new avenues for financial success. My entrepreneurial
+              endeavors
+              allow me to apply my technical skills in practical ways, turning ideas into tangible results and constantly
+              seeking opportunities to grow and succeed in the competitive tech landscape.
+            </p> -->
+    </section>
 
-      </div>
-      <div id="usefulButtons">
-        <button id="downloadCV">
-          Download CV
-        </button>
-        <!-- <button>
+    <!-- DOWNLOADS -->
+    <section id="usefulButtons">
+      <button id="downloadCV">
+        Download CV
+      </button>
+      <!-- <button>
           Download my CV.
         </button> -->
-      </div>
-      <div id="letsLink">
-        <h2 id="letsLinkTitle">Let's Link</h2>
-        <ul class="letLinkContent">
-          <li>
-            <a href="https://www.linkedin.com/in/francisco-borges-29abaa1a5/" target="blank_">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/Franciscoborges2002" target="blank_">Github</a>
-          </li>
-          <li>
-            <a href="https://codepen.io/franciscoborges2002" target="blank_">Codepen</a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/@franciscoborges7897" target="blank_">Youtube</a>
-          </li>
-        </ul>
-      </div>
+    </section>
 
-      <div id="skills">
-        <h2 id="projectsTitle">Skills</h2>
-        <div class="skillCardWrapper">
-          <!-- First line -->
-          <div class="skillCards">
-            <div class="skill orangeBadge">
-              <img src="./public/icons/tech/html.svg" class="techIcon" />
-              <p>HTML</p>
-            </div>
-            <div class="skill blueBadge">
-              <img src="./public/icons/tech/css.svg" class="techIcon" />
-              <p>CSS</p>
-            </div>
-            <div class="skill yellowBadge">
-              <img src="./public/icons/tech/javascript.svg" class="techIcon" />
-              <p>JavaScript</p>
-            </div>
-            <div class="skill blueBadge">
-              <img src="./public/icons/tech/react.svg" class="techIcon" />
-              <p>React</p>
-            </div>
-            <div class="skill greenBadge">
-              <img src="./public/icons/tech/nodejs.svg" class="techIcon" />
-              <p>NodeJs</p>
-            </div>
+    <!-- LINKS -->
+    <section id="letsLink">
+      <h2 id="letsLinkTitle">Let's Link</h2>
+      <ul class="letLinkContent">
+        <li>
+          <a href="https://www.linkedin.com/in/francisco-borges-29abaa1a5/" target="blank_">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/Franciscoborges2002" target="blank_">Github</a>
+        </li>
+        <li>
+          <a href="https://codepen.io/franciscoborges2002" target="blank_">Codepen</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@franciscoborges7897" target="blank_">Youtube</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 id="projectsTitle">Skills</h2>
+      <div class="skillCardWrapper">
+        <!-- First line -->
+        <div class="skillCards">
+          <div class="skill littleBadge greenBadge">
+            <img src="./public/icons/tech/html.svg" class="techIcon" />
+            <p>HTML</p>
           </div>
+          <div class="skill littleBadge blueBadge">
+            <img src="./public/icons/tech/css.svg" class="techIcon" />
+            <p>CSS</p>
+          </div>
+          <div class="skill littleBadge yellowBadge">
+            <img src="./public/icons/tech/javascript.svg" class="techIcon" />
+            <p>JavaScript</p>
+          </div>
+          <div class="skill littleBadge blueBadge">
+            <img src="./public/icons/tech/react.svg" class="techIcon" />
+            <p>React</p>
+          </div>
+          <div class="skill littleBadge greenBadge">
+            <img src="./public/icons/tech/nodejs.svg" class="techIcon" />
+            <p>NodeJs</p>
+          </div>
+        </div>
 
-          <!-- Second line -->
-          <!-- <div class="skillCards">
-            <div class="skill">
-              <img src="./public/icons/tech/html.svg" class="techIcon" />
-              <p>HTML</p>
-            </div>
-            <div class="skill">
-              <img src="./public/icons/tech/css.svg" class="techIcon" />
-              <p>CSS</p>
-            </div>
-            <div class="skill">
-              <img src="./public/icons/tech/javascript.svg" class="techIcon" />
-              <p>JavaScript</p>
-            </div>
-            <div class="skill">
-              <img src="./public/icons/tech/react.svg" class="techIcon" />
-              <p>React</p>
-            </div>
-            <div class="skill">
-              <img src="./public/icons/tech/nodejs.svg" class="techIcon" />
-              <p>NodeJs</p>
-            </div>
-          </div> -->
+        <!-- Second line -->
+        <div class="skillCards">
+          <div class="skill littleBadge orangeBadge">
+            <img src="./public/icons/tech/java.svg" class="techIcon" />
+            <p>JAVA</p>
+          </div>
+          <div class="skill littleBadge greenBadge">
+            <img src="./public/icons/tech/springboot.svg" class="techIcon" />
+            <p>Spring Boot</p>
+          </div>
+          <div class="skill littleBadge blueBadge">
+            <img src="./public/icons/tech/mysql.svg" class="techIcon" />
+            <p>MySQL</p>
+          </div>
+          <div class="skill littleBadge blueBadge">
+            <img src="./public/icons/tech/postgres.svg" class="techIcon" />
+            <p>Postgres</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div id="projects">
-        <h2 id="projectsTitle">Projects</h2>
-        <div class="project">
-          <div class="infoProject">
-            <h3>PomoCore</h3>
-            <div class="projectContent">
-              <p>Pomocore is a Vue.js Single Page Application (SPA) that uses the Pomodoro technique to simplify
-                project
-                management and improve productivity</p>
-            </div>
-          </div>
-          <div class="projectFooter">
-            <a href="https://github.com/Franciscoborges2002/pomoCore" target="_blank">Github</a>
-            | <a href="https://franciscoborges2002.github.io/pomoCore/" target="_blank">Live Preview</a>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 id="projectsTitle">Projects</h2>
+      <div class="project">
+        <div class="infoProject">
+          <h3>PomoCore</h3>
+          <div class="projectContent">
+            <p>Pomocore is a Vue.js Single Page Application (SPA) that uses the Pomodoro technique to simplify
+              project
+              management and improve productivity</p>
           </div>
         </div>
-        <div class="project">
-          <div class="infoProject">
-            <h3>bolsasEstudo.pt</h3>
-            <div class="projectContent">
-              <p>BolsasEstudo.pt is an open-source platform that allows users to easily explore and access available
-                scholarships in Portugal.</p>
-            </div>
-          </div>
-          <div class="projectFooter">
-            <a href="https://github.com/Franciscoborges2002/bolsasEstudo.pt" target="_blank">Github</a>
-            | <a href="" target="_blank">Live Preview</a>
-          </div>
-        </div>
-        <div class="project">
-          <div class="infoProject">
-            <h3>steamShark</h3>
-            <div class="projectContent">
-              <p>Steamshark is a browser extension designed to prevent phishing attacks within the Steam
-                environment,
-                enhancing user security while surfing the web.</p>
-            </div>
-          </div>
-          <div class="projectFooter">
-            <a href="https://github.com/Franciscoborges2002/steamShark" target="_blank">Github</a>
-            | <a href="https://franciscoborges2002.github.io/steamShark/" target="_blank">Live Preview</a>
-          </div>
-        </div>
-        <div>
-          <a href="projects.html" id="moreProjectsText">More projects<span id="linkAnimation">.</span></a>
+        <div class="projectFooter">
+          <a href="https://github.com/Franciscoborges2002/pomoCore" target="_blank">Github</a>
+          | <a href="https://franciscoborges2002.github.io/pomoCore/" target="_blank">Live Preview</a>
         </div>
       </div>
-      <!-- <div id="timeline">
-        <h2>Timeline</h2>
-        <div class="scrollable-div">
-          <div class="lines">
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-            <div class="line"></div>
-          </div>
-
-          <div class="cards">
-            <div class="card">
-
-              <h4>16:30</h4>
-              <p>Believing Is The Absence<br> Of Doubt</p>
-            </div>
-            <div class="card mid">
-              <h4>15:22</h4>
-              <p>Start With A Baseline</p>
-            </div>
-            <div class="card">
-              <h4>14:15</h4>
-              <p>Break Through Self Doubt<br> And Fear</p>
-            </div>
+      <div class="project">
+        <div class="infoProject">
+          <h3>bolsasEstudo.pt</h3>
+          <div class="projectContent">
+            <p>BolsasEstudo.pt is an open-source platform that allows users to easily explore and access available
+              scholarships in Portugal.</p>
           </div>
         </div>
+        <div class="projectFooter">
+          <a href="https://github.com/Franciscoborges2002/bolsasEstudo.pt" target="_blank">Github</a>
+          | <a href="" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div class="project">
+        <div class="infoProject">
+          <h3>steamShark</h3>
+          <div class="projectContent">
+            <p>Steamshark is a browser extension designed to prevent phishing attacks within the Steam
+              environment,
+              enhancing user security while surfing the web.</p>
+          </div>
+        </div>
+        <div class="projectFooter">
+          <a href="https://github.com/Franciscoborges2002/steamShark" target="_blank">Github</a>
+          | <a href="https://franciscoborges2002.github.io/steamShark/" target="_blank">Live Preview</a>
+        </div>
+      </div>
+      <div>
+        <a href="projects.html" id="moreProjectsText">More projects<span id="linkAnimation">.</span></a>
+      </div>
+    </section>
 
-      </div> -->
-      <!-- <div id="articles">
+    <!-- TIMELINE -->
+    <section id="timeline">
+      <h2>Timeline</h2>
+      <div class="timelineLegend">
+        <div class="legendItem">
+          <div class="legendDot" style="background: #e74c3c;"></div>
+          Important
+        </div>
+        <div class="legendItem">
+          <div class="legendDot" style="background: #3498db;"></div>
+          Projects
+        </div>
+        <div class="legendItem">
+          <div class="legendDot" style="background: #27ae60;"></div>
+          School
+        </div>
+      </div>
+      <div class="timelineWrapper">
+        <div class="timeline">
+          <div class="timelineLine"></div>
+          <div class="events" id="eventsContainer">
+            <div class="startPoint"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div id="articles">
         <h2 id="articlesTitle">Articles</h2>
         <ul class="articles">
           <li>
@@ -240,43 +248,46 @@
           <a href="src/pages/articles.html">More Articles...</a>
         </div>
       </div> -->
-      <div id="contact">
-        <h2 id="contactTitle">Contact</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-          <div class="contact-form-inputs">
 
-            <input type="hidden" name="access_key" value="30091985-e87e-42bd-b4ba-5fe5ecb62a0e" />
-            <div class="contact-form-name">
-              <label>Name:</label>
-              <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-            </div>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 id="contactTitle">Contact</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <div class="contact-form-inputs">
 
-            <div class="contact-form-email">
-              <label>Email:</label>
-              <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            </div>
-
-            <div class="contact-form-message">
-              <label>Message:</label>
-              <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
+          <input type="hidden" name="access_key" value="30091985-e87e-42bd-b4ba-5fe5ecb62a0e" />
+          <div class="contact-form-name">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
           </div>
-        </form>
-      </div>
 
-      <footer>
-        <p>Made with ❤️ and ☕ by Francisco Borges. </p>
-        <!-- <a id="console" href="#about">About</a>
+          <div class="contact-form-email">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+          </div>
+
+          <div class="contact-form-message">
+            <label>Message:</label>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ and ☕ by Francisco Borges. </p>
+    <!-- <a id="console" href="#about">About</a>
             <a id="console" href="#letsLink">Let's Link</a>
             <a id="console" href="#projects">Projects</a>
             <a id="console" href="#articles">Articles</a> -->
-      </footer>
-    </div>
+  </footer>
 
-    <script src="./src/scripts/main.js"></script>
-    <script src="./src/scripts/index.js"></script>
+  <!-- SCRIPTS TO USE IN INDEX PAGE -->
+  <script src="./src/scripts/main.js"></script>
+  <script src="./src/scripts/index.js"></script>
 </body>
 
 </html>

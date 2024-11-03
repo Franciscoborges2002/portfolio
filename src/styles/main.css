@@ -34,6 +34,41 @@ textarea {
   resize: none;
 }
 
+/**
+*  _    _ ______          _____  ______ _____  
+* | |  | |  ____|   /\   |  __ \|  ____|  __ \ 
+* | |__| | |__     /  \  | |  | | |__  | |__) |
+* |  __  |  __|   / /\ \ | |  | |  __| |  _  / 
+* | |  | | |____ / ____ \| |__| | |____| | \ \ 
+* |_|  |_|______/_/    \_\_____/|______|_|  \_\
+*/
+
+ul {
+  list-style-type: none;
+}
+
+header{
+  padding-top: 2vh;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  align-items: center;
+  justify-content: end;
+  padding: 0 1vw;
+}
+
+/**
+*  ______ ____   ____ _______ ______ _____  
+* |  ____/ __ \ / __ \__   __|  ____|  __ \ 
+* | |__ | |  | | |  | | | |  | |__  | |__) |
+* |  __|| |  | | |  | | | |  |  __| |  _  / 
+* | |   | |__| | |__| | | |  | |____| | \ \ 
+* |_|    \____/ \____/  |_|  |______|_|  \_\
+*/
+
 footer {
   position: relative;
   bottom: 0px;
@@ -44,18 +79,45 @@ footer {
   padding-bottom: 40px;
 }
 
-.greenBadge {
-  padding-top: 0.1em;
-  padding-bottom: 0.1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 10px;
+/**
+*  ____          _____   _____ ______  _____ 
+* |  _ \   /\   |  __ \ / ____|  ____|/ ____|
+* | |_) | /  \  | |  | | |  __| |__  | (___  
+* |  _ < / /\ \ | |  | | | |_ |  __|  \___ \ 
+* | |_) / ____ \| |__| | |__| | |____ ____) |
+* |____/_/    \_\_____/ \_____|______|_____/ 
+*/
+
+.littleBadge{
+  padding: 5px;
   font-size: small;
-  background-color: #bbf7d0;
-  color: #1f2937;
   border-radius: 9999px;
   cursor: pointer;
   transition: all 1s;
+  color: #000000;
+}
+
+.mediumBadge{
+  padding: 10px;
+  font-size: medium;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+  color: #000000;
+}
+
+.largeBadge{
+  padding: 20px;
+  font-size: medium;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 1s;
+  color: #000000;
+}
+
+.greenBadge {
+  background-color: #bbf7d0;
+  color: #000000;
 }
 
 .greenBadge:hover {
@@ -63,36 +125,15 @@ footer {
 }
 
 .redBadge {
-  padding-top: 0.1em;
-  padding-bottom: 0.1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 10px;
-  font-size: small;
   background-color: #f7d6bb;
-  color: #1f2937;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 1s;
 }
 
 .redBadge:hover {
   background-color: #ff9d9d;
 }
 
-
 .blueBadge {
-  padding-top: 0.1em;
-  padding-bottom: 0.1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 10px;
-  font-size: small;
   background-color: #bbf0f7;
-  color: #1f2937;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 1s;
 }
 
 .blueBadge:hover {
@@ -100,17 +141,7 @@ footer {
 }
 
 .orangeBadge {
-  padding-top: 0.1em;
-  padding-bottom: 0.1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 10px;
-  font-size: small;
   background-color: #f7e4bb;
-  color: #1f2937;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 1s;
 }
 
 .orangeBadge:hover {
@@ -118,16 +149,7 @@ footer {
 }
 
 .yellowBadge {
-  padding-top: 0.1em;
-  padding-bottom: 0.1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  padding: 10px;
   background-color: #f7f1bb;
-  color: #1f2937;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: all 1s;
 }
 
 .yellowBadge:hover {

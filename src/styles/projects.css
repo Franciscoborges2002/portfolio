@@ -1,16 +1,43 @@
-.container{
-    padding-left: 5vw;
-}
+/**
+*   _____ ______ _   _ ______ _____            _      
+*  / ____|  ____| \ | |  ____|  __ \     /\   | |     
+* | |  __| |__  |  \| | |__  | |__) |   /  \  | |     
+* | | |_ |  __| | . ` |  __| |  _  /   / /\ \ | |     
+* | |__| | |____| |\  | |____| | \ \  / ____ \| |____ 
+*  \_____|______|_| \_|______|_|  \_\/_/    \_\______|
+*/
 
 h1{
     padding-top: 30px;
 }
 
-.backOption{
-    top: 10px;
-    left: 10px;
-    position: fixed;
+h3{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
 }
+
+/**
+*  __  __          _____ _   _ 
+* |  \/  |   /\   |_   _| \ | |
+* | \  / |  /  \    | | |  \| |
+* | |\/| | / /\ \   | | | . ` |
+* | |  | |/ ____ \ _| |_| |\  |
+* |_|  |_/_/    \_\_____|_| \_|
+*/
+
+main, .container{
+    padding-left: 5vw;
+}
+
+/**
+*  _____  _____   ____       _ ______ _____ _______ _____ 
+* |  __ \|  __ \ / __ \     | |  ____/ ____|__   __/ ____|
+* | |__) | |__) | |  | |    | | |__ | |       | | | (___  
+* |  ___/|  _  /| |  | |_   | |  __|| |       | |  \___ \ 
+* | |    | | \ \| |__| | |__| | |___| |____   | |  ____) |
+* |_|    |_|  \_\\____/ \____/|______\_____|  |_| |_____/ 
+*/
 
 #projects{
     display: flex;
@@ -28,7 +55,7 @@ h1{
 
 .project:hover{
     background-color: #d4d4d4;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 2vh 0vh 0vh 2vh;
 }
 
@@ -89,10 +116,4 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-h3{
-    padding-top: 2vh;
-    display: flex;
-    justify-content: center;
 }
