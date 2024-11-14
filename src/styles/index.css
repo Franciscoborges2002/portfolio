@@ -76,7 +76,7 @@ main {
 * |_____|_| \_|  |_|  |_|  \_\\____/|_____/ \____/ \_____|  |_|  |_____\____/|_| \_| |_|  |_|______/_/    \_\_____/|______|_|  \_\
 */
 
-#headerIntroduction {
+.headerIntroduction {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -84,7 +84,7 @@ main {
   gap: 3vh;
 }
 
-#headerIntroduction .boarderImg {
+.headerIntroduction .boarderImg {
   border-radius: 50%;
   width: 10vw;
   /*height: 15vh;*/
@@ -97,7 +97,7 @@ main {
   cursor: pointer;
 }
 
-#headerIntroduction .boarderImg img {
+.headerIntroduction .boarderImg img {
   border-style: solid;
   border-width: 2px;
   border-color: rgb(75, 75, 75);
@@ -107,6 +107,40 @@ main {
   /*height: 14.2vh;*/
   max-width: 100%;
   height: auto;
+}
+
+.wavingHand {
+  font-size: 5vw;
+  animation: wave 2.5s infinite;
+  transform-origin: 75% 75%;
+  display: inline-block;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /**
@@ -140,23 +174,20 @@ main {
 }
 
 #usefulButtons button {
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 30px;
-  border: 1px solid black;
-  background-color: rgba(0, 0, 0, 0);
+  padding: 16px;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   font-size: medium;
+  font-weight: bold;
+  color: #ffffff;
   transition: all 1s;
 }
 
 #usefulButtons button:hover {
-  padding: 20px;
-  border-radius: 30px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-size: larger;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /**
@@ -194,21 +225,33 @@ main {
   gap: 1vh;
 }
 
-.skillCards {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-  font-size: xx-small;
-}
-
-.skillCards {
-  padding-left: 16px;
-}
-
 .skillCardWrapper {
+  padding-left: 16px;
+  overflow: auto;
+  white-space: nowrap;
   display: flex;
   flex-direction: row;
   gap: 2vh;
+}
+
+.skillCards {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  min-width: 35vh;
+  gap: 2vh;
+  font-size: xx-small;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px rgba(0, 0, 0, 0.5) solid;
+  padding: 2vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.skillCardHeader {
+  font-size: large;
 }
 
 .skill p {
@@ -217,17 +260,22 @@ main {
 
 .skill {
   display: flex;
-  flex-direction: row;
-  gap: 5px;
+  flex-direction: column;
   align-items: center;
-  padding-right: 10px;
+  gap: 5px;
 }
 
 .techIcon {
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  padding-left: 10px;
+}
+
+.skillCardContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+  max-width: 100%;
 }
 
 /**
@@ -361,7 +409,7 @@ main {
   transition: all 0.5s;
 }
 
-.projectEvent:hover{
+.projectEvent:hover {
   width: 12px;
   height: 12px;
 }
@@ -377,7 +425,7 @@ main {
   transition: all 0.5s;
 }
 
-.schoolEvent:hover{
+.schoolEvent:hover {
   width: 12px;
   height: 12px;
 }
@@ -509,45 +557,20 @@ main {
   gap: 5vh;
 }
 
-/**
-*   _____ ____  _   _ _______       _____ _______ 
-*  / ____/ __ \| \ | |__   __|/\   / ____|__   __|
-* | |   | |  | |  \| |  | |  /  \ | |       | |   
-* | |   | |  | | . ` |  | | / /\ \| |       | |   
-* | |___| |__| | |\  |  | |/ ____ \ |____   | |   
-*  \_____\____/|_| \_|  |_/_/    \_\_____|  |_|   
-*/
-
-.contact-form-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-  width: 50%;
-  padding-left: 16px;
-}
-
-.contact-form-name,
-.contact-form-email,
-.contact-form-message {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5vh;
-}
-
 /* #console {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#buttonChangeColor {
-  cursor: pointer;
-  border: 0px;
-  background-color: rgb(189, 189, 189, 0);
-} 
-
-.scrollable-div {
-  height: 50; /* set a fixed height for the div 
-  overflow-y: auto;
-  overflow-x: hidden;
-}
- */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #buttonChangeColor {
+    cursor: pointer;
+    border: 0px;
+    background-color: rgb(189, 189, 189, 0);
+  } 
+  
+  .scrollable-div {
+    height: 50; /* set a fixed height for the div 
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+   */

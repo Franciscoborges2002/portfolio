@@ -37,13 +37,15 @@
         <li><a href="/index.html">Home</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="/articles.html">Articles</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <!-- HEADER MAIN -->
-    <section id="headerIntroduction">
+    <section class="headerIntroduction">
+      <span class="wavingHand">👋</span>
       <div class="introductionPart">
         <p class="introductionText" id="introductionText">Hi, I'm</p>
         <h1>FRANCISCO</h1>
@@ -81,9 +83,11 @@
       <button id="downloadCV">
         Download CV
       </button>
-      <!-- <button>
-          Download my CV.
-        </button> -->
+      <a href="./contact.html">
+        <button id="">
+          Contact Me
+        </button>
+      </a>
     </section>
 
     <!-- LINKS -->
@@ -109,9 +113,54 @@
     <section id="skills">
       <h2 id="projectsTitle">Skills</h2>
       <div class="skillCardWrapper">
-        <!-- First line -->
+        <!-- Languages -->
         <div class="skillCards">
-          <div class="skill littleBadge greenBadge">
+          <div class="skillCardHeader">
+            <h3>Languages</h3>
+          </div>
+          <div class="skillCardContent">
+            <div class="skill">
+              <img src="./public/icons/tech/javascript.svg" class="techIcon" />
+              <p>JavaScript</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/typescript.svg" class="techIcon" />
+              <p>Typescript</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/java.svg" class="techIcon" />
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/r.svg" class="techIcon" />
+              <p>R</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/c.svg" class="techIcon" />
+              <p>C</p>
+            </div>
+          </div>
+        </div>
+        <!-- Fontend -->
+        <div class="skillCards">
+          <div class="skillCardHeader">
+            <h3>Front-End</h3>
+          </div>
+          <div class="skillCardContent">
+            <div class="skill">
+              <img src="./public/icons/tech/html.svg" class="techIcon" />
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/react.svg" class="techIcon" />
+              <p>React</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/vue.svg" class="techIcon" />
+              <p>Vue</p>
+            </div>
+          </div>
+          <!-- <div class="skill littleBadge greenBadge">
             <img src="./public/icons/tech/html.svg" class="techIcon" />
             <p>HTML</p>
           </div>
@@ -123,33 +172,79 @@
             <img src="./public/icons/tech/javascript.svg" class="techIcon" />
             <p>JavaScript</p>
           </div>
-          <div class="skill littleBadge blueBadge">
-            <img src="./public/icons/tech/react.svg" class="techIcon" />
-            <p>React</p>
-          </div>
-          <div class="skill littleBadge greenBadge">
-            <img src="./public/icons/tech/nodejs.svg" class="techIcon" />
-            <p>NodeJs</p>
-          </div>
+          
+           -->
         </div>
 
-        <!-- Second line -->
-        <div class="skillCards">
-          <div class="skill littleBadge orangeBadge">
+        <!-- <div class="skill littleBadge orangeBadge">
             <img src="./public/icons/tech/java.svg" class="techIcon" />
             <p>JAVA</p>
           </div>
-          <div class="skill littleBadge greenBadge">
-            <img src="./public/icons/tech/springboot.svg" class="techIcon" />
-            <p>Spring Boot</p>
+          
+           -->
+
+        <!-- Backend -->
+        <div class="skillCards">
+          <div class="skillCardHeader">
+            <h3>Back-End</h3>
           </div>
-          <div class="skill littleBadge blueBadge">
-            <img src="./public/icons/tech/mysql.svg" class="techIcon" />
-            <p>MySQL</p>
+          <div class="skillCardContent">
+            <div class="skill">
+              <img src="./public/icons/tech/springboot.svg" class="techIcon" />
+              <p>Spring Boot</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/nodejs.svg" class="techIcon" />
+              <p>NodeJs</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/vue.svg" class="techIcon" />
+              <p>Vue</p>
+            </div>
           </div>
-          <div class="skill littleBadge blueBadge">
-            <img src="./public/icons/tech/postgres.svg" class="techIcon" />
-            <p>Postgres</p>
+        </div>
+        <!-- DBs -->
+        <div class="skillCards">
+          <div class="skillCardHeader">
+            <h3>Databases</h3>
+          </div>
+          <div class="skillCardContent">
+            <div class="skill">
+              <img src="./public/icons/tech/mysql.svg" class="techIcon" />
+              <p>MySQL</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/postgres.svg" class="techIcon" />
+              <p>Postgres</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/mongodb.svg" class="techIcon" />
+              <p>Mongodb</p>
+            </div>
+          </div>
+        </div>
+        <!-- UI  -->
+        <div class="skillCards">
+          <div class="skillCardHeader">
+            <h3>UI</h3>
+          </div>
+          <div class="skillCardContent">
+            <div class="skill">
+              <img src="./public/icons/tech/css.svg" class="techIcon" />
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/tailwind.svg" class="techIcon" />
+              <p>Tailwind</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/bootstrap.svg" class="techIcon" />
+              <p>Bootstrap</p>
+            </div>
+            <div class="skill">
+              <img src="./public/icons/tech/mongodb.svg" class="techIcon" />
+              <p>shadcn</p>
+            </div>
           </div>
         </div>
       </div>
@@ -248,33 +343,6 @@
           <a href="src/pages/articles.html">More Articles...</a>
         </div>
       </div> -->
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 id="contactTitle">Contact</h2>
-      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-        <div class="contact-form-inputs">
-
-          <input type="hidden" name="access_key" value="30091985-e87e-42bd-b4ba-5fe5ecb62a0e" />
-          <div class="contact-form-name">
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-          </div>
-
-          <div class="contact-form-email">
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-          </div>
-
-          <div class="contact-form-message">
-            <label>Message:</label>
-            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
-          </div>
-
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </section>
   </main>
 
   <footer>

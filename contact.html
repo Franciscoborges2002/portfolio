@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='./src/styles/main.css'>
+    <title>FB - Contact</title>
+
+    <meta name="title" content="Francisco Borges Contact">
+    <meta name="image" content="https://ibb.co/gD7CHpk">
+    <meta name="description" content="My contact me section of my portfolio!">
+    <meta name="author" content="Francisco Borges">
+
+    <!-- For Facebook Type -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ibb.co/gD7CHpk">
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://ibb.co/gD7CHpk">
+</head>
+
+<body>
+    <header>
+        <!-- <button id="buttonChangeColor">
+          <img id="darkModeEnabler" />
+        </button> -->
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/articles.html">Articles</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contact">
+        <!-- CONTACT -->
+        <h2 id="contactTitle">Contact</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <div class="contact-form-inputs">
+  
+            <input type="hidden" name="access_key" value="30091985-e87e-42bd-b4ba-5fe5ecb62a0e" />
+            <div class="contact-form-name">
+              <label>Name:</label>
+              <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            </div>
+  
+            <div class="contact-form-email">
+              <label>Email:</label>
+              <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            </div>
+  
+            <div class="contact-form-message">
+              <label>Message:</label>
+              <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            </div>
+  
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+    </main>
+</body>
+
+</html>
