@@ -1,101 +1,109 @@
-import Image from "next/image";
 
-export default function Home() {
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { ExternalLink } from 'lucide-react'
+import Link from "next/link"
+import { InformationComponent } from "@/components/InformationComponent"
+import { projects } from "../../public/data/projects"
+import { getNewestArticles } from "@/lib/articles"
+
+export default function PortfolioPage() {
+
+  const featureProjects = projects.filter(project => project.feature);
+
+  const newestArticles = getNewestArticles();
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto p-4 py-20 grid gap-6 md:grid-cols-[1fr_2fr] lg:px-20">
+        {/* LEFT PART */}
+        <InformationComponent />
+        {/* RIGHT PART */}
+        <div className="space-y-10 prose dark:prose-invert max-w-none">
+          {/* README */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-bold">🙋 README.md</h2>
+            <Card>
+              <CardContent className="pt-5 space-y-4">
+                <p>
+                  Im a full-stack developer passionate about creating beautiful and functional web applications.
+                  Currently working on exciting projects using React, Next.js, and TypeScript.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-bold">⭐Highlighted Projects</h2>
+
+            <div className="grid grid-cols-2 gap-6 not-prose">
+              {featureProjects.map((project, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle className="flex gap-2 ">
+                      <h2 className="text-lg">{project.title}</h2>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <div className="overflow-x-auto scrollbar-thin scrollbar-webkit">
+                      <div className="flex gap-2">
+                        {project.headerTags && project.headerTags.map((badge, badgeIndex) => (
+                          <Badge key={badgeIndex} variant="secondary" className="cursor-pointer flex flex-none">
+                            {badge}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex justify-end">
+                    {project.github &&
+                      < Link href={project.github} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
+                        <p>Open</p>
+                        <ExternalLink className="ml-2 h-3 w-3" />
+                      </Link>
+                    }
+
+                    {!project.github && project.demo &&
+                      <Link href={project.demo} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
+                        <p>Open</p>
+                        <ExternalLink className="ml-2 h-3 w-3" />
+                      </Link>
+                    }
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+
+            <Link href='/projects#projects' className="flex flex-col">
+              <Button className="w-1/2 self-center">More Projects</Button>
+            </Link>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-2xl font-bold">📝 Articles</h2>
+
+            {/* {newestArticles.map((article, index) => (
+              {artice}
+            ))
+            } */}
+
+
+            <Link href='/articles#articles' className="flex flex-col">
+              <Button className="w-1/2 self-center">More Articles</Button>
+            </Link>
+          </div>
+
+          {/* <h2>📊 GitHub Stats</h2>
+            <img
+              src="/placeholder.svg?height=200&width=495"
+              alt="GitHub Stats"
+              className="w-full rounded-lg bg-muted"
+            /> */}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+
+    </div >
+  )
 }
