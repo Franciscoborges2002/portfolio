@@ -1,6 +1,6 @@
 /* import { useState } from 'react'; */
 /* import { Button } from "@/components/ui/button"; */
-import { getArticleData } from "@/lib/articles";
+import { getArticleData, getSlugArticles } from "@/lib/articles";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 /* import { MDXRemote } from 'next-mdx-remote/rsc' */
@@ -8,13 +8,18 @@ import { Badge } from "@/components/ui/badge";
 import { MarkdownViewer } from "@/components/MarkdownViewer";
 import Image from "next/image";
 
-const SingleArticlePage = ({ params }: { params: { slug: string } }) => {
-    
-    const { data, content } = getArticleData(`${params.slug}.md`)
-    /* const [contentState, setContentState] = useState(content);
-    setContentState(content);
+export function generateStaticParams() {
+    return getSlugArticles();
+}
 
-    console.log(contentState) */
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ slug: string[] }>
+}) {
+    const { slug } = await params
+
+    const { data, content } = getArticleData(`${slug}.md`)
 
     return (
         <div className="min-h-screen bg-background">
@@ -59,5 +64,3 @@ const SingleArticlePage = ({ params }: { params: { slug: string } }) => {
         </div>
     )
 }
-
-export default SingleArticlePage;

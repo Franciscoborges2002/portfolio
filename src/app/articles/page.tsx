@@ -17,8 +17,9 @@ interface GroupedPosts {
     [year: number]: Article[];
 }
 
-export default function ArticlesPage(/* { articlesData }: { years: number[],articlesData: Article[] } */) {
+export default function ArticlesPage(/*{ allArticlesData } : { [year: number]: number[] } */) {
 
+    /* console.log(allArticlesData) */
     const articlesData: GroupedPosts = getSortedArticlesData().groupedArticles;
 
     return (
@@ -58,3 +59,4 @@ export default function ArticlesPage(/* { articlesData }: { years: number[],arti
         </div>
     )
 }
+

@@ -28,7 +28,7 @@ export function getSortedArticlesData() {
     });
 
     // Group posts by year
-    const groupedArticles = allPostsData.reduce((acc: { [year: number]: number[] }, post) => {
+    const groupedArticles = allPostsData.reduce((acc: { [year: number]: { slug: string; date: string; title: string; }[] }, post) => {
         const year = parseInt(post.date.split('/')[2]);
         if (!acc[year]) acc[year] = [];
         acc[year].push(post);
@@ -59,7 +59,7 @@ Função para retornar os artigos mais recentes, para a página inicial
 export function getNewestArticles() {
     // Get file names under /posts
     const fileNames = fs.readdirSync(articlesDirectory);
-    
+
     const allPostsData = fileNames.map((fileName) => {
         // Remove ".md" from file name to be the url
         const slug = fileName.replace(/\.md$/, '');
@@ -80,14 +80,23 @@ export function getNewestArticles() {
         };
     });
 
-    // Group posts by year
-    const newestArticles = allPostsData.reduce((acc: { [year: number]: number[] }, post) => {
-        const year = parseInt(post.date.split('/')[2]);
-        if (!acc[year]) acc[year] = [];
-        acc[year].push(post);
-        return acc;
-    }, {});
+    /* console.log(newestArticles); */
 
-    console.log(newestArticles);
+    return allPostsData;
+}
 
+//Function to get all slugs for articles
+export function getSlugArticles() {
+    const fileNames = fs.readdirSync(articlesDirectory);
+    const allSlugs = fileNames.map((fileName) => {
+        // Remove ".md" from file name to be the url
+        const slug = fileName.replace(/\.md$/, '');
+
+        // Combine the data with the id
+        return {
+            slug: slug,
+        }
+    });
+
+    return allSlugs;
 }

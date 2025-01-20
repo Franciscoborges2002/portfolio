@@ -3,13 +3,14 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "../../public/data/projects"
+import Image from "next/image";
 
 export function ProjectCard({ project }: { project: typeof projects[number] }) {
     return (
         <Card className="flex flex-col overflow-hidden">
             <CardHeader className="p-0 pb-3">
                 <div className="relative overflow-hidden">
-                    <img
+                    <Image
                         src={project.image}
                         alt={project.title}
                         className="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110"

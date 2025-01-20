@@ -60,7 +60,7 @@ export default function PortfolioPage() {
                   </CardContent>
                   <CardFooter className="flex justify-end">
                     {project.github &&
-                      < Link href={project.github} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
+                      <Link href={project.github} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center">
                         <p>Open</p>
                         <ExternalLink className="ml-2 h-3 w-3" />
                       </Link>
@@ -84,10 +84,28 @@ export default function PortfolioPage() {
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold">📝 Articles</h2>
 
-            {/* {newestArticles.map((article, index) => (
-              {artice}
+            {/* {Object.keys(newestArticles).map(([key, val], i) => (
+              { key }
             ))
             } */}
+
+            {
+              Object.keys(newestArticles).map((key, i) => (
+                <Link href={`/articles/${newestArticles[i].slug}`} key={i} className="p-5 pb-1 rounded-xl transition-all duration-300 flex flex-col gap-2 hover:bg-foreground/10">
+                  <div>
+                    <h2 className="text-lg">
+                      {newestArticles[i].title}
+                    </h2>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-4">
+                      {newestArticles[i].date}
+                    </p>
+                  </div>
+                </Link>
+
+              ))
+            }
 
 
             <Link href='/articles#articles' className="flex flex-col">
