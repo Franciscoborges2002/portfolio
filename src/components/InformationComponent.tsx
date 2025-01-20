@@ -18,7 +18,7 @@ export function InformationComponent() {
                         </Avatar>
                         <div>
                             <CardTitle>Francisco Borges</CardTitle>
-                            <p className="text-muted-foreground">Masters IS Student <Link href="https://www.uminho.pt/PT" target="_blank" className="hover:underline">@uminho</Link></p>
+                            <p className="text-muted-foreground">Master in Engineering and Management of Information Systems <Link href="https://www.uminho.pt/PT" target="_blank" className="hover:underline">@uminho</Link></p>
                             <p className="text-muted-foreground">Working <Link href="https://www.ccg.pt/" target="_blank" className="hover:underline">@CCG</Link></p>
                         </div>
                     </div>
