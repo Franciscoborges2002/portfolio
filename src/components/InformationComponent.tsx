@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { SiLeetcode } from "react-icons/si";
 
 export function InformationComponent() {
     return (
@@ -66,6 +67,12 @@ export function InformationComponent() {
                             <Button variant="outline" size="icon" asChild>
                                 <Link href="https://www.youtube.com/@franciscoborges7897" target="_blank" rel="noopener noreferrer">
                                     <Youtube className="h-5 w-5" />
+                                    <span className="sr-only">Website</span>
+                                </Link>
+                            </Button>
+                            <Button variant="outline" size="icon" asChild>
+                                <Link href="https://leetcode.com/u/fborges/" target="_blank" rel="noopener noreferrer">
+                                    <SiLeetcode className="h-5 w-5" />
                                     <span className="sr-only">Website</span>
                                 </Link>
                             </Button>

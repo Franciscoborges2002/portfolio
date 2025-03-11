@@ -3,7 +3,7 @@ export const projects = [
         title: "steamShark",
         description: "An Google chrome extension to prevent phishing attacks in steam environmnent!",
         tech: ["Javascript", "GitHub"],
-        headerTags: ["🏗️ Under Constrution", "OpenSource"],
+        headerTags: ["OpenSource"],
         github: "https://github.com/Franciscoborges2002/steamShark",
         demo: "https://franciscoborges2002.github.io/steamShark/",
         image: "/placeholder.svg?height=200&width=300",
