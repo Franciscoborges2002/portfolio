@@ -19,6 +19,14 @@ export const projects = [
         feature: false
     },
     {
+        title: "TSI2market App",
+        description: "I was the main frontend developer for the TSI2Market application hosted by AISSC @Uminho.",
+        tech: ["React Native", "Expo", "React", "Shadcn"],
+        headerTags: ["Event App", "Frontend"],
+        image: "/placeholder.svg?height=200&width=300",
+        feature: true
+    },
+    {
         title: "bolsasEstudo.pt",
         description: "Show the available schollarships in portugal.",
         tech: ["Nodejs", "Express", "Typescript", "Vuejs", "Postgres"],
