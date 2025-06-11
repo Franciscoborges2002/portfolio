@@ -1,12 +1,12 @@
 export const projects = [
     {
         title: "steamShark",
-        description: "An Google chrome extension to prevent phishing attacks in steam environmnent!",
+        description: "A Google chrome extension to prevent phishing attacks in steam environmnent!",
         tech: ["Javascript", "GitHub"],
         headerTags: ["OpenSource"],
-        github: "https://github.com/Franciscoborges2002/steamShark",
+        github: "https://github.com/steamShark/exension",
         demo: "https://franciscoborges2002.github.io/steamShark/",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/steamShark.png",
         feature: true
     },
     {
@@ -15,15 +15,15 @@ export const projects = [
         tech: ["Vue", "LocalStorage"],
         github: "https://github.com/Franciscoborges2002/pomoCore",
         demo: "https://franciscoborges2002.github.io/pomoCore/",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/pomocore.png",
         feature: false
     },
     {
         title: "TSI2market App",
-        description: "I was the main frontend developer for the TSI2Market application hosted by AISSC @Uminho.",
+        description: "Main frontend developer for the TSI2Market application hosted by AISSC @Uminho.",
         tech: ["React Native", "Expo", "React", "Shadcn"],
         headerTags: ["Event App", "Frontend"],
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/TSI2Market.png",
         feature: true
     },
     {
@@ -32,34 +32,34 @@ export const projects = [
         tech: ["Nodejs", "Express", "Typescript", "Vuejs", "Postgres"],
         headerTags: ["🏗️ Under Constrution", "OpenSource"],
         github: "https://github.com/Franciscoborges2002/bolsasEstudo.pt",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: true
     },
     {
         title: "faceitJS",
-        description: "An package that wraps the faceit api to facilitate the useage of faceit API.",
+        description: "A API wrapper for faceit API to facilitate the usage.",
         headerTags: ["OpenSource"],
         tech: ["Javascript", "GitHub"],
         github: "https://github.com/Franciscoborges2002/faceitjs",
         demo: "https://www.npmjs.com/package/@fborges2002/faceitjs",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: false
     },
     {
         title: "goalVision",
-        description: "This application is designed to bridge the gap between football coaches and players who are eager to take their skills to the next level.",
+        description: "Designed to bridge the gap between football coaches and players who are eager to take their skills to the next level.",
         headerTags: ["🏗️ Under Constrution"],
         demo: "https://www.goalvision.pt",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: true
     },
     {
         title: "Arquitecture Transformation",
-        description: "In this project we were tasked with passing the project from monolithic to a microservices architecture.",
+        description: "Transform a monolithic application to a microservices architecture.",
         tech: ["Java",  "Spring", "MySQL", "Docker", "UML"],
         headerTags: ["📚 College Project"],
         github: "https://github.com/Franciscoborges2002/ASID",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: false
     },
     {
@@ -68,7 +68,7 @@ export const projects = [
         tech: ["Java",  "Spring", "Android Studio", "MySQL", "Docker", "UML"],
         headerTags: ["📚 College Project"],
         github: "https://github.com/Franciscoborges2002/ABC-DAI",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: false
     },
     {
@@ -77,7 +77,7 @@ export const projects = [
         tech: ["Java",  "Spring", "Kafka", "Android Studio", "MySQL", "Docker",  "OpenCV", "NIOP", "IPCamera", "UML"],
         headerTags: ["📚 College Project"],
         github: "https://github.com/Franciscoborges2002/ACSI",
-        image: "/placeholder.svg?height=200&width=300",
+        image: "/images/projects/placeholder.png",
         feature: false
     }
 ]

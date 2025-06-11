@@ -1,11 +1,6 @@
-/* import Link from "next/link"
-import { ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button" */
 import { getSortedArticlesData } from "@/lib/articles"
-
 import { InformationComponent } from "@/components/InformationComponent";
-import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import ArticleComponent from "@/components/ArticleComponent";
 
 interface Article {
     slug: string;
@@ -18,8 +13,6 @@ interface GroupedPosts {
 }
 
 export default function ArticlesPage(/*{ allArticlesData } : { [year: number]: number[] } */) {
-
-    /* console.log(allArticlesData) */
     const articlesData: GroupedPosts = getSortedArticlesData().groupedArticles;
 
     return (
@@ -43,14 +36,9 @@ export default function ArticlesPage(/*{ allArticlesData } : { [year: number]: n
 
                                     <div className="flex flex-col gap-2 pl-5">
                                         {articles.map((article: Article) => (
-                                            <div key={article.slug} className="flex flex-col gap-1">
-                                                <Link href={`/articles/${article.slug}`}>
-                                                    <h2 className="text-sm font-medium text-muted-foreground">{article.title}</h2>
-                                                </Link>
-                                                <Separator />
-                                            </div>
+                                            <ArticleComponent  key={article.slug} article={article} />
                                         ))}
-                                    </div>
+                                    </div>  
                                 </div>
                             ))}
                     </div>

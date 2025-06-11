@@ -14,6 +14,8 @@ export function ProjectCard({ project }: { project: typeof projects[number] }) {
                         src={project.image}
                         alt={project.title}
                         className="w-full h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                        width={1000}
+                        height={500}
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-opacity duration-300 ease-in-out cursor-pointer" />
                 </div>

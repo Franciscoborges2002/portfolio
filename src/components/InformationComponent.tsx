@@ -14,7 +14,7 @@ export function InformationComponent() {
                 <CardHeader>
                     <div className="flex flex-col gap-4">
                         <Avatar className="h-36 w-36">
-                            <AvatarImage src="/placeholder2.svg" alt="John Doe" />
+                            <AvatarImage src="/images/profilePhoto.png" alt="John Doe" />
                             <AvatarFallback>FB</AvatarFallback>
                         </Avatar>
                         <div>
