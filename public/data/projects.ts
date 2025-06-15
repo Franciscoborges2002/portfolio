@@ -4,7 +4,7 @@ export const projects = [
         description: "A Google chrome extension to prevent phishing attacks in steam environmnent!",
         tech: ["Javascript", "GitHub"],
         headerTags: ["OpenSource"],
-        github: "https://github.com/steamShark/exension",
+        github: "https://github.com/steamShark",
         demo: "https://franciscoborges2002.github.io/steamShark/",
         image: "/images/projects/steamShark.png",
         feature: true
