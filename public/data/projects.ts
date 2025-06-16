@@ -36,6 +36,16 @@ export const projects = [
         feature: true
     },
     {
+        title: "leetcode Stats Card",
+        description: "Show your leetcode stats with a card in your socials.",
+        tech: ["React", "Nextjs"],
+        headerTags: ["V1.0.0", "OpenSource"],
+        demo: "https://leetcodestatscard.fborges.dev/",
+        github: "https://github.com/Franciscoborges2002/leetStatsCard",
+        image: "/images/projects/leetcodestatscard.png",
+        feature: true
+    },
+    {
         title: "faceitJS",
         description: "A API wrapper for faceit API to facilitate the usage.",
         headerTags: ["OpenSource"],
@@ -48,10 +58,10 @@ export const projects = [
     {
         title: "goalVision",
         description: "Designed to bridge the gap between football coaches and players who are eager to take their skills to the next level.",
-        headerTags: ["🏗️ Under Constrution"],
+        headerTags: ["⏸️ Paused"],
         demo: "https://www.goalvision.pt",
         image: "/images/projects/placeholder.png",
-        feature: true
+        feature: false
     },
     {
         title: "Arquitecture Transformation",
