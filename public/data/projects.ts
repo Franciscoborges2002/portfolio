@@ -42,7 +42,7 @@ export const projects = [
         headerTags: ["V1.0.0", "OpenSource"],
         demo: "https://leetcodestatscard.fborges.dev/",
         github: "https://github.com/Franciscoborges2002/leetStatsCard",
-        image: "/images/projects/leetcodestatscard.png",
+        image: "/images/projects/leetcodeStatsCard.png",
         feature: true
     },
     {

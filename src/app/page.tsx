@@ -24,11 +24,10 @@ export default function PortfolioPage() {
           <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold">🙋 README.md</h2>
             <Card>
-              <CardContent className="pt-5 space-y-4">
-                <p>
-                  Im a full-stack developer passionate about creating beautiful and functional web applications.
-                  Currently working on exciting projects using React, Next.js, and TypeScript.
-                </p>
+              <CardContent className="pt-5 space-y-2">
+                <p>My passion for technology ignited at a young age when I started to understood the essence of what a computer truly is.</p>
+                <p>Before i got into university, I start learning programming and embarked on creating small projects and doing some automation on my daily tasks.</p>
+                <p> Over time, these early efforts allowed me to improve my skills, progressively taking more complex projects with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to learn more.</p>
               </CardContent>
             </Card>
           </div>
