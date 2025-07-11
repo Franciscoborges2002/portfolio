@@ -59,6 +59,8 @@ export default {
 		}
 	},
 	plugins: [
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		require('@tailwindcss/typography'),
 		function ({ addUtilities }: any) {
 			/* SCROLLBAR */
 			const newUtilities = {

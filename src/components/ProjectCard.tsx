@@ -24,9 +24,9 @@ export function ProjectCard({ project }: { project: typeof projects[number] }) {
                 <CardTitle className="mb-2 flex flex-col gap-2">
                     <h3>{project.title}</h3>
                     {
-                        project.headerTags && (
+                        project.tags && (
                             <div className="flex flex-row gap-2">
-                                {project.headerTags.map((tag, tagIndex) => (
+                                {project.tags.map((tag, tagIndex) => (
                                     <Badge key={tagIndex} variant="secondary" className="cursor-pointer">{tag}</Badge>
                                 ))}
                             </div>

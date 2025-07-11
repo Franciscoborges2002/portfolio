@@ -14,7 +14,7 @@ interface NotchHeaderProps {
 
 export const Notch: React.FC<NotchHeaderProps> = ({ text, isActive }) => {
     return (
-        <div className="relative w-full lg:w-60 h-8 bg-foreground/10 rounded-3xl overflow-hidden">
+        <div className="relative w-full lg:w-60 h-8 bg-muted/50 rounded-3xl overflow-hidden shadow-md">
             {/* Animated text */}
             <motion.div
                 className="flex flex-row gap-1 mt-1 text-black font-medium items-center"

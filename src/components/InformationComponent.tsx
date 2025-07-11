@@ -1,11 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Github, Linkedin, MapPin, Youtube } from 'lucide-react'
+import { Linkedin, MapPin, Youtube } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SiLeetcode } from "react-icons/si";
+import { siGithub, siTryhackme } from "simple-icons"
 
 export function InformationComponent() {
     return (
@@ -54,7 +55,17 @@ export function InformationComponent() {
                         <div className="flex justify-around gap-8 w-full">
                             <Button variant="outline" size="icon" asChild>
                                 <Link href="https://github.com/franciscoborges2002" target="_blank" rel="noopener noreferrer">
-                                    <Github className="h-5 w-5" />
+                                    <svg
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="48"
+                                        height="48"
+                                        fill="currentColor"
+                                    >
+                                        <title>{siGithub.title}</title>
+                                        <path d={siGithub.path} />
+                                    </svg>
                                     <span className="sr-only">GitHub</span>
                                 </Link>
                             </Button>
@@ -73,6 +84,23 @@ export function InformationComponent() {
                             <Button variant="outline" size="icon" asChild>
                                 <Link href="https://leetcode.com/u/fborges/" target="_blank" rel="noopener noreferrer">
                                     <SiLeetcode className="h-5 w-5" />
+                                    <span className="sr-only">Website</span>
+                                </Link>
+                            </Button>
+                            <Button variant="outline" size="icon" asChild>
+                                <Link href="https://tryhackme.com/p/fborges02" target="_blank" rel="noopener noreferrer">
+                                    <svg
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="48"
+                                        height="48"
+                                        fill="currentColor"
+                                    >
+                                        <title>{siTryhackme.title}</title>
+                                        <path d={siTryhackme.path} />
+                                    </svg>
+                                    <span className="sr-only">GitHub</span>
                                     <span className="sr-only">Website</span>
                                 </Link>
                             </Button>

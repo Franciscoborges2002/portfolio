@@ -4,6 +4,9 @@ import matter from 'gray-matter';
 
 const articlesDirectory = path.join(process.cwd(), 'public', 'data', 'articles');
 
+/* 
+    Gets the articles sorted
+*/
 export function getSortedArticlesData() {
     // Get file names under /posts
     const fileNames = fs.readdirSync(articlesDirectory);
@@ -41,6 +44,9 @@ export function getSortedArticlesData() {
     };
 }
 
+/* 
+    Get the data from an specified article
+*/
 export function getArticleData(fileName: string) {
     const fullPath = path.join(articlesDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -54,7 +60,7 @@ export function getArticleData(fileName: string) {
 }
 
 /*
-Função para retornar os artigos mais recentes, para a página inicial 
+    Returns the most recent articles, for main page
 */
 export function getNewestArticles() {
     // Get file names under /posts
@@ -85,7 +91,9 @@ export function getNewestArticles() {
     return allPostsData;
 }
 
-//Function to get all slugs for articles
+/* 
+    Gets all the slugs available in the folder
+*/
 export function getSlugArticles() {
     const fileNames = fs.readdirSync(articlesDirectory);
     const allSlugs = fileNames.map((fileName) => {
