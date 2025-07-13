@@ -10,6 +10,16 @@ export const projects = [
         feature: true
     },
     {
+        title: "Liiink",
+        description: "An fully opensource alternative to linktree!",
+        tech: ["React", "Css", "Vite", "Typescript"],
+        tags: ["OpenSource"],
+        github: "https://github.com/Franciscoborges2002/liiink",
+        /* demo: "https://franciscoborges2002.github.io/pomoCore/", */
+        image: "/images/projects/liiink.png",
+        feature: false
+    },
+    {
         title: "PomoCore",
         description: "A website that applies the Pomodoro Technique to your tasks, helping you manage time, boost productivity, and track progress.",
         tech: ["Vue", "LocalStorage"],
