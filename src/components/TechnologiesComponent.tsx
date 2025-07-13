@@ -40,6 +40,7 @@ const techCategories = [
     icon: <Smartphone className="w-5 h-5" />,
     technologies: [
       { name: "React Native", color: "bg-blue-100 text-blue-800 border-blue-200" },
+      { name: "Expo", color: "bg-slate-100 text-slate-800 border-slate-200" },
     ],
   },
   {
