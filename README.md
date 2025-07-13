@@ -1,9 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Portfolio
 
-## Getting Started
+This is the source code for my personal portfolio website, built with Next.js and TypeScript. It's designed to showcase my projects, experience, and skills—ideal as a template or starting point for others.
 
-First, run the development server:
+---
 
+## 🚀 Features
+
+- **Built with Next.js** and TypeScript for modern SSR and developer experience.
+- Styled using **Tailwind CSS**.
+- Custom fonts optimized with `next/font`.
+- Includes MDX support for content flexibility.
+- Deployed easily on **Coolify**.
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js (v16+ recommended)
+- Yarn, npm, pnpm, or bun package manager
+
+### Installation
+
+```bash
+git clone https://github.com/Franciscoborges2002/portfolio.git
+cd portfolio
+npm install     # or yarn / pnpm install / bun install
+```
+
+### Running Localy
 ```bash
 npm run dev
 # or
@@ -14,23 +38,35 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to http://localhost:3000 in your browser—any changes to app/page.tsx will live‑reload.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deployment
+This project works seamlessly with Vercel, the platform created by the Next.js team. For deployment:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Connect your GitHub repository in Vercel.
 
-## Learn More
+2. Trigger a production build (automatically on push to main).
 
-To learn more about Next.js, take a look at the following resources:
+3. Your portfolio goes live on your personal domain or .vercel.app subdomain.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Configuration
+1. Font preferences are set using next/font and configured in next.config.ts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Styles are defined in tailwind.config.ts.
 
-## Deploy on Vercel
+3. Code checks via ESLint and TypeScript, configured in .eslintrc.json and tsconfig.json.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. You can change all information at the components.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎓 Why this setup?
+1. Clean and powerful Next.js + TypeScript integration.
+
+2. Tailwind CSS for utility‑first styling speed.
+
+3. High‑quality developer experience with fast refresh, linting, and type safety.
+
+## 🧩 Contributors
+Contributions are welcome! Feel free to open an issue or submit a pull request with improvements, bug fixes, or feature enhancements.
+
+## ⚖️ License
+Released under the [MIT License](./LICENSE). Feel free to reuse or adapt this code for personal or professional use.
