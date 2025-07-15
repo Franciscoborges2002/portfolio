@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Suspense } from "react"
-import { projects } from "../../../public/data/projects"
+import { projects } from "../../data/projects"
 
 function ProjectSkeleton() {
     return (

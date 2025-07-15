@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { projects } from "../../public/data/projects"
+import { projects } from "../data/projects"
 import Image from "next/image";
 
 export function ProjectCard({ project }: { project: typeof projects[number] }) {

@@ -1,14 +1,23 @@
+"use client"
+
+import { useState } from "react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Linkedin, MapPin, Youtube } from 'lucide-react'
+import { ArrowRight, Linkedin, MapPin, Youtube } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import Link from "next/link"
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SiLeetcode } from "react-icons/si";
 import { siGithub, siTryhackme } from "simple-icons"
+import { techCategories, colorMap } from "@/data/technologies"
 
 export function InformationComponent() {
+    // Flatten all techs from categories
+    const allTechs = techCategories.flatMap(category => category.technologies)
+
+    const [showAll, setShowAll] = useState(false)
+    const visibleTechs = showAll ? allTechs : allTechs.slice(0, 5)
     return (
         <div className="space-y-6">
             <Card>
@@ -110,18 +119,33 @@ export function InformationComponent() {
             </Card>
 
             <Card>
-                <CardHeader>
+                <CardHeader className="flex flex-row justify-between">
                     <CardTitle>Skills</CardTitle>
+                    <Link href="/#technologies">
+                        <ArrowRight className="w-5 h-5 text-primary/90 hover:text-primary/50 transition-all duration-150" stroke="currentColor" />
+                    </Link>
                 </CardHeader>
                 <CardContent className="space-y-2">
                     <div className="flex flex-wrap gap-2">
-                        <Badge variant="outline" className="cursor-pointer">JavaScript</Badge>
-                        <Badge variant="outline" className="cursor-pointer">TypeScript</Badge>
-                        <Badge variant="outline" className="cursor-pointer">React</Badge>
-                        <Badge variant="outline" className="cursor-pointer">Next.js</Badge>
-                        <Badge variant="outline" className="cursor-pointer">Node.js</Badge>
-                        <Badge variant="outline" className="cursor-pointer">PostgreSQL</Badge>
+                        {visibleTechs.map((tech) => (
+                            <Badge
+                                key={tech.name}
+                                variant="outline"
+                                className={`cursor-pointer text-xs ${colorMap[tech.color]}`}
+                            >
+                                <div className="w-2 h-2 rounded-full bg-current mr-2 opacity-60" />
+                                {tech.name}
+                            </Badge>
+                        ))}
                     </div>
+                    {allTechs.length > 5 && (
+                        <button
+                            className="mt-2 text-sm text-primary hover:text-primary/60 transition-all duration-200 cursor-pointer"
+                            onClick={() => setShowAll(!showAll)}
+                        >
+                            {showAll ? "Show less" : `Show more (${allTechs.length - 5} more)`}
+                        </button>
+                    )}
                 </CardContent>
             </Card>
 

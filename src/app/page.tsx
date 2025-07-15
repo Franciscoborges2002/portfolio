@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { InformationComponent } from "@/components/InformationComponent"
-import { projects } from "../../public/data/projects"
+import { projects } from "../data/projects"
 import { getNewestArticles } from "@/lib/articles"
 import HighlightedProjectsCard from "@/components/HighlightedProjectsCard"
 import Technologies from "@/components/TechnologiesComponent"
@@ -78,7 +78,7 @@ export default function PortfolioPage() {
             </Link>
           </div>
 
-          <div>
+          <div id="technologies">
             <Technologies />
           </div>
 

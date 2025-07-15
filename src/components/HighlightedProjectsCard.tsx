@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Pin, ExternalLink } from "lucide-react"
-import { projects } from "../../public/data/projects"
+import { projects } from "../data/projects"
 import Link from "next/link"
 import { siGithub } from "simple-icons"
 
