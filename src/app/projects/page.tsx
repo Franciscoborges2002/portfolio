@@ -1,6 +1,4 @@
-import { InformationComponent } from "@/components/InformationComponent"
 import { ProjectCard } from "@/components/ProjectCard"
-/* import { Button } from "@/components/ui/button" */
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Suspense } from "react"
@@ -35,7 +33,7 @@ function ProjectSkeleton() {
 
 function ProjectGrid() {
     return (
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 grid-cols-1 xl:grid-cols-2">
             {projects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
             ))}
@@ -45,25 +43,21 @@ function ProjectGrid() {
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen bg-background">
-            <div className="container mx-auto p-4 py-20 grid gap-6 md:grid-cols-[1fr_2fr] lg:px-20">
-                {/* LEFT PART */}
-                <InformationComponent />
-                {/* RIGHT PART */}
-                <div id="projects">
-                    <div className="mb-8 flex items-center justify-between">
-                        <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
-                    </div>
-                    <Suspense fallback={
-                        <div>
-                            {[...Array(6)].map((_, index) => (
-                                <ProjectSkeleton key={index} />
-                            ))}
-                        </div>
-                    }>
-                        <ProjectGrid />
-                    </Suspense>
+        <div className="w-full px-5 mx-auto">
+            {/* RIGHT PART */}
+            <div id="projects">
+                <div className="mb-8 flex items-center justify-between">
+                    <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
                 </div>
+                <Suspense fallback={
+                    <div>
+                        {[...Array(6)].map((_, index) => (
+                            <ProjectSkeleton key={index} />
+                        ))}
+                    </div>
+                }>
+                    <ProjectGrid />
+                </Suspense>
             </div>
         </div>
     )

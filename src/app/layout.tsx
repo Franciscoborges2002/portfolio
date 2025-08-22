@@ -5,6 +5,7 @@ import { Header } from '@/components/HeaderComponent'
 import { Footer } from '@/components/FooterComponent'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import Script from 'next/script'
+import InfoAside from '@/components/InfoAsideComponent';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,11 +27,15 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <header>
-            <Header />
-          </header>
 
-          <main>
+          {/* Anything after this can use peer-checked: */}
+          <Header />
+
+          <main className='py-20 grid gap-6 lg:grid-cols-[1fr_2fr] lg:px-20'>
+            <div className='w-full'>
+              {/* LEFT PART */}
+              <InfoAside />
+            </div>
             {children}
           </main>
 

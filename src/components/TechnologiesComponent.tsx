@@ -29,7 +29,7 @@ export default function Technologies() {
         <p className="text-muted-foreground">Tools and technologies I work with</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {techCategories.map((category) => {
           const Icon = iconMap[category.icon as LucideIconName]
           return (

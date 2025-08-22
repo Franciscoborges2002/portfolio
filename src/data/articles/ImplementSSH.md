@@ -6,6 +6,7 @@ tags: ["SSH", "Raspberry Pi"]
 image: "/images/articles/ImplementingSSHRaspberryPi.png"
 medium: "https://medium.com/@franciscomsborges2002"
 toc: [
+    { title: "Introduction", id: "introduction" },
     { title: "What You’ll Need", id: "what-youll-need" },
     { title: "Step 1: Enable SSH", id: "step-1-enable-ssh" },
     { title: "Step 2: Find IP Address", id: "step-2-find-ip" },
@@ -14,6 +15,8 @@ toc: [
     { title: "Conclusion", id: "conclusion" }
 ]
 ---
+
+<span id="introduction"></span>
 
 ## Introduction
 
@@ -27,7 +30,9 @@ Secure Shell (SSH) is an essential tool for remotely managing your Raspberry Pi 
 - Power supply for the Pi
 - A monitor and keyboard
 
-## [Step 1: Enable SSH](#step-1-enable-ssh)
+<span id="step-1-enable-ssh"></span>
+
+## Step 1: Enable SSH
 
 1. Boot up the Raspberry Pi with a display.
 2. Go to **_Menu_** → **_Preferences_** → **_Raspberry Pi Configuration_**.
@@ -35,11 +40,15 @@ Secure Shell (SSH) is an essential tool for remotely managing your Raspberry Pi 
 4. Set **_SSH_** to "Enabled".
 5. Click **_OK_**.
 
-## [Step 2: Find the Raspberry Pi’s IP Address](#step-2-find-ip)
+<span id="step-2-find-ip"></span>
+
+## Step 2: Find the Raspberry Pi’s IP Address
 
 You’ll need the IP address to connect via SSH. You can:
 
-## [Step 3: SSH into the Raspberry Pi](#step-3-ssh-into-pi)
+<span id="step-3-ssh-into-pi"></span>
+
+## Step 3: SSH into the Raspberry Pi
 
 From a terminal (macOS/Linux) or using an SSH client like **_PuTTY_** (Windows):
 
@@ -50,7 +59,9 @@ The default credentials are:
 - Username: **_pi_**
 - Password: **_raspberry_**
 
-## [Step 4: Secure Your Connection](#step-4-secure-ssh)
+<span id="step-4-secure-ssh"></span>
+
+## Step 4: Secure Your Connection
 
 ### 1. Change the default password
 
@@ -59,6 +70,8 @@ The default credentials are:
 ### 2. Update the system
 
 > sudo apt update && sudo apt upgrade -y
+
+<span id="conclusion"></span>
 
 ## Conclusion
 
