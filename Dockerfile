@@ -1,32 +1,29 @@
-# Use a smaller base image with Node.js
+# ---------- builder ----------
 FROM node:20-alpine AS builder
-
-# Set working directory
 WORKDIR /app
 
-# Install dependencies first for better caching
+# Install deps (cached)
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
-# Copy the rest of the application files
+# Build
 COPY . .
-
-# Build the app
 RUN npm run build
 
+# Trim dev deps AFTER the build (runtime only needs prod deps)
+RUN npm prune --omit=dev
 
-# Use a lightweight image for production
+# ---------- runner ----------
 FROM node:20-alpine AS runner
-
 WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3001
 
-# Copy only necessary files from the builder stage
-COPY --from=builder /app/dist ./dist
+# Copy runtime artifacts
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package*.json ./
 
-# Expose the port
 EXPOSE 3001
-
-# Start the application
 CMD ["npm", "run", "start"]
