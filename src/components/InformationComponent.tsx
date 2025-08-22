@@ -61,8 +61,8 @@ export function InformationComponent() {
 
                         <Separator />
 
-                        <div className="flex justify-around gap-8 w-full">
-                            <Button variant="outline" size="icon" asChild>
+                        <div className="flex justify-around flex-wrap gap-8 w-full">
+                            <Button variant="outline" size="icon" asChild className="p-2">
                                 <Link href="https://github.com/franciscoborges2002" target="_blank" rel="noopener noreferrer">
                                     <svg
                                         role="img"
@@ -78,25 +78,25 @@ export function InformationComponent() {
                                     <span className="sr-only">GitHub</span>
                                 </Link>
                             </Button>
-                            <Button variant="outline" size="icon" asChild>
+                            <Button variant="outline" size="icon" asChild className="p-2">
                                 <Link href="https://www.linkedin.com/in/francisco-borges2002" target="_blank" rel="noopener noreferrer">
                                     <Linkedin className="h-5 w-5" />
                                     <span className="sr-only">LinkedIn</span>
                                 </Link>
                             </Button>
-                            <Button variant="outline" size="icon" asChild>
+                            <Button variant="outline" size="icon" asChild className="p-2">
                                 <Link href="https://www.youtube.com/@franciscoborges7897" target="_blank" rel="noopener noreferrer">
                                     <Youtube className="h-5 w-5" />
                                     <span className="sr-only">Website</span>
                                 </Link>
                             </Button>
-                            <Button variant="outline" size="icon" asChild>
+                            <Button variant="outline" size="icon" asChild className="p-2">
                                 <Link href="https://leetcode.com/u/fborges/" target="_blank" rel="noopener noreferrer">
                                     <SiLeetcode className="h-5 w-5" />
                                     <span className="sr-only">Website</span>
                                 </Link>
                             </Button>
-                            <Button variant="outline" size="icon" asChild>
+                            <Button variant="outline" size="icon" asChild className="p-2">
                                 <Link href="https://tryhackme.com/p/fborges02" target="_blank" rel="noopener noreferrer">
                                     <svg
                                         role="img"
