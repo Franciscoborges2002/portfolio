@@ -161,7 +161,7 @@ export function InformationComponent() {
                             <li className="ml-4">
                                 <div className="absolute w-3 h-3 bg-border rounded-full mt-1.5 -left-1.5 border border-background"></div>
                                 <time className="mb-1 text-sm font-normal leading-none text-muted-foreground">December 2024 - present</time>
-                                <h3 className="text-sm font-semibold">Assistant Researcher</h3>
+                                <h3 className="text-sm font-semibold">Backend Developer</h3>
                                 <h3 className="text-sm font-semibold hover:underline">
                                     <Link href="https://ccg.pt/" target="_blank">
                                         @ccg
@@ -171,16 +171,27 @@ export function InformationComponent() {
                             </li>
                             <li className="ml-4">
                                 <div className="absolute w-3 h-3 bg-border rounded-full mt-1.5 -left-1.5 border border-background"></div>
-                                <time className="mb-1 text-sm font-normal leading-none text-muted-foreground">November 2024 - present</time> <br />
-                                <time className="mb-1 text-sm font-normal leading-none text-muted-foreground">December 2022 - October 2023</time>
+                                <time className="mb-1 text-sm font-normal leading-none text-muted-foreground">November 2024 - present</time>
 
-                                <h3 className="text-sm font-semibold">Member of technological Department</h3>
+                                <h3 className="text-sm font-semibold">Mobile/Frontend Developer</h3>
                                 <h3 className="text-sm font-semibold hover:underline">
                                     <Link href="https://aissc.dsi.uminho.pt/" target="_blank">
                                         @AIS.SC
                                     </Link>
                                 </h3>
-                                <p className="text-sm text-muted-foreground">Worked as a member of the technological department, building and mantaining projects.</p>
+                                <p className="text-sm text-muted-foreground">Worked as lead mobile & frontend developer. Conducted a team of 3 developers to build the interface for the event application.</p>
+                            </li>
+                            <li className="ml-4">
+                                <div className="absolute w-3 h-3 bg-border rounded-full mt-1.5 -left-1.5 border border-background"></div>
+                                <time className="mb-1 text-sm font-normal leading-none text-muted-foreground">December 2022 - October 2023</time>
+
+                                <h3 className="text-sm font-semibold">Backend Developer</h3>
+                                <h3 className="text-sm font-semibold hover:underline">
+                                    <Link href="https://aissc.dsi.uminho.pt/" target="_blank">
+                                        @AIS.SC
+                                    </Link>
+                                </h3>
+                                <p className="text-sm text-muted-foreground">Worked mainly in backend, modifying, upgrading and researching new features to service.</p>
                             </li>
                             <li className="ml-4">
                                 <div className="absolute w-3 h-3 bg-border rounded-full mt-1.5 -left-1.5 border border-background"></div>
@@ -202,7 +213,7 @@ export function InformationComponent() {
                                         @ioTech
                                     </Link>
                                 </h3>
-                                <p className="text-sm text-muted-foreground">Made an integration between APIs.</p>
+                                <p className="text-sm text-muted-foreground">Made an integration between APIs for an Industry 4.0 project.</p>
                             </li>
 
                         </ol>
