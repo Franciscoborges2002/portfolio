@@ -61,7 +61,7 @@ export const projects = [
         tech: ["Vuejs", "Shlink", "crypto"],
         tags: ["V1.0.0"],
         demo: "https://refferly.club/",
-        image: "/images/projects/refferly.club.png",
+        image: "/images/projects/refferlyClub.png",
         feature: false
     },
     {
