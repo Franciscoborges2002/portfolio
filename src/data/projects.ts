@@ -5,7 +5,7 @@ export const projects = [
         tech: ["Javascript", "GitHub", "API", "golang", "SQLite", "react"],
         tags: ["OpenSource", "Extension"],
         github: "https://github.com/steamShark",
-        demo: "https://franciscoborges2002.github.io/steamShark/",
+        demo: "https://steamshark.app/",
         image: "/images/projects/steamShark.png",
         feature: true
     },
@@ -25,15 +25,6 @@ export const projects = [
         github: "https://github.com/Franciscoborges2002/liiink",
         demo: "https://franciscoborges2002.github.io/pomoCore/",
         image: "/images/projects/liiink.png",
-        feature: false
-    },
-    {
-        title: "PomoCore",
-        description: "A website that applies the Pomodoro Technique to your tasks, helping you manage time, boost productivity, and track progress.",
-        tech: ["Vue", "LocalStorage"],
-        github: "https://github.com/Franciscoborges2002/pomoCore",
-        demo: "https://franciscoborges2002.github.io/pomoCore/",
-        image: "/images/projects/pomocore.png",
         feature: false
     },
     {
@@ -69,9 +60,28 @@ export const projects = [
         description: "A extension to help Team Fortress 2 players trading their items.",
         tech: ["Javascript", "Github"],
         tags: ["V1.0.0", "Opensource", "Extension"],
-        demo: "extension page",
+        demo: "https://chromewebstore.google.com/detail/tf2tradingutils/pjfeekdjhfcpaphlmapjeamcakidicjf",
         github: "https://github.com/Franciscoborges2002/tf2TradingUtils",
         image: "/images/projects/tf2TradingUtils.png",
+        feature: false
+    },
+    {
+        title: "utils.fborges.dev",
+        description: "A extension to help Team Fortress 2 players trading their items.",
+        tech: ["Javascript", "Github"],
+        tags: ["V1.0.0", "Opensource", "Extension"],
+        demo: "https://utils.fborges.dev/",
+        github: "https://github.com/Franciscoborges2002/utils.fborges.dev",
+        image: "/images/projects/utils.fborges.dev.png",
+        feature: false
+    },
+    {
+        title: "PomoCore",
+        description: "A website that applies the Pomodoro Technique to your tasks, helping you manage time, boost productivity, and track progress.",
+        tech: ["Vue", "LocalStorage"],
+        github: "https://github.com/Franciscoborges2002/pomoCore",
+        demo: "https://franciscoborges2002.github.io/pomoCore/",
+        image: "/images/projects/pomocore.png",
         feature: false
     },
     {
