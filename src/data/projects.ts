@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "steamShark",
         description: "A Google chrome extension to prevent phishing attacks in steam environmnent!",
-        tech: ["Javascript", "GitHub", "API", "golang", "SQLite", "react"],
+        tech: ["Javascript", "Git", "API", "golang", "SQLite", "react"],
         tags: ["OpenSource", "Extension"],
         github: "https://github.com/steamShark",
         demo: "https://steamshark.app/",
@@ -34,7 +34,7 @@ export const projects = [
         tags: ["🏗️ Under Constrution", "OpenSource"],
         github: "https://github.com/Franciscoborges2002/bolsasEstudo.pt",
         image: "/images/projects/placeholder.png",
-        feature: true
+        feature: false
     },
     {
         title: "leetcode Stats Card",
@@ -58,17 +58,17 @@ export const projects = [
     {
         title: "TF2 Trading Utils",
         description: "A extension to help Team Fortress 2 players trading their items.",
-        tech: ["Javascript", "Github"],
-        tags: ["V1.0.0", "Opensource", "Extension"],
+        tech: ["Javascript", "Git"],
+        tags: ["V1.0.0", "Opensource", "Extension", "30+ Downloads"],
         demo: "https://chromewebstore.google.com/detail/tf2tradingutils/pjfeekdjhfcpaphlmapjeamcakidicjf",
         github: "https://github.com/Franciscoborges2002/tf2TradingUtils",
         image: "/images/projects/tf2TradingUtils.png",
-        feature: false
+        feature: true
     },
     {
         title: "utils.fborges.dev",
         description: "A extension to help Team Fortress 2 players trading their items.",
-        tech: ["Javascript", "Github"],
+        tech: ["Javascript", "Git"],
         tags: ["V1.0.0", "Opensource", "Extension"],
         demo: "https://utils.fborges.dev/",
         github: "https://github.com/Franciscoborges2002/utils.fborges.dev",
@@ -88,7 +88,7 @@ export const projects = [
         title: "faceitJS",
         description: "A API wrapper for faceit API to facilitate the usage.",
         tags: ["Opensource", "Package"],
-        tech: ["Javascript", "GitHub", "npm"],
+        tech: ["Javascript", "Git", "npm"],
         github: "https://github.com/Franciscoborges2002/faceitjs",
         demo: "https://www.npmjs.com/package/@fborges2002/faceitjs",
         image: "/images/projects/placeholder.png",
@@ -98,7 +98,7 @@ export const projects = [
         title: "backpacktfJS",
         description: "A API wrapper for backpack.tf API to facilitate the usage.",
         tags: ["Opensource", "Package"],
-        tech: ["Javascript", "GitHub", "npm"],
+        tech: ["Javascript", "Git", "npm"],
         github: "https://github.com/Franciscoborges2002/backpacktfJS",
         demo: "https://www.npmjs.com/package/backpacktfjs",
         image: "/images/projects/placeholder.png",
@@ -108,7 +108,7 @@ export const projects = [
         title: "startproject cli",
         description: "A simple CLI tool to start a JS project in major frameworks.",
         tags: ["Opensource", "Package"],
-        tech: ["Javascript", "GitHub", "npm"],
+        tech: ["Javascript", "Git", "npm"],
         github: "https://github.com/Franciscoborges2002/startProjectCLI",
         demo: "https://www.npmjs.com/package/startprojectcli",
         image: "/images/projects/placeholder.png",
