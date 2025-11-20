@@ -13,7 +13,8 @@ interface GroupedPosts {
 
 export default function ArticlesPage(/*{ allArticlesData } : { [year: number]: number[] } */) {
     const articlesData: GroupedPosts = getSortedArticlesData().groupedArticles;
-
+    
+    
     return (
         <section className="w-full px-5 mx-auto">
             {/* RIGHT PART */}

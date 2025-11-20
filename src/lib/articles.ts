@@ -38,6 +38,10 @@ export function getSortedArticlesData() {
         return acc;
     }, {});
 
+    Object.keys(groupedArticles).forEach((year) => {
+        groupedArticles[+year] = groupedArticles[+year].reverse(); // in-place reverse
+    });
+
     //return year:[articles]
     return {
         groupedArticles
