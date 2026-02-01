@@ -1,0 +1,13 @@
+services:
+  frontend:
+    container_name: portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+    restart: unless-stopped
