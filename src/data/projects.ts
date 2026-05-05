@@ -1,5 +1,6 @@
 export const projects = [
     {
+        id: 1,
         title: "steamShark",
         description: "A Google chrome extension to prevent phishing attacks in steam environmnent!",
         tech: ["Javascript", "Git", "API", "golang", "SQLite", "react"],
@@ -10,6 +11,7 @@ export const projects = [
         feature: true
     },
     {
+        id: 2,
         title: "TSI2market App",
         description: "Main frontend developer for the TSI2Market application hosted by AISSC @Uminho.",
         tech: ["React Native", "Expo", "React", "Shadcn", "tailwindcss"],
@@ -18,6 +20,7 @@ export const projects = [
         feature: true
     },
     {
+        id: 3,
         title: "Liiink",
         description: "An fully opensource alternative to linktree!",
         tech: ["React", "Css", "Vite", "Typescript"],
@@ -28,6 +31,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 4,
         title: "bolsasEstudo.pt",
         description: "Show the available schollarships in portugal.",
         tech: ["Nodejs", "Express", "Typescript", "Vuejs", "Postgres"],
@@ -37,6 +41,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 5,
         title: "leetcode Stats Card",
         description: "Show your leetcode stats with a card in your socials.",
         tech: ["React", "Nextjs"],
@@ -47,6 +52,7 @@ export const projects = [
         feature: true
     },
     {
+        id: 6,
         title: "Refferly",
         description: "An website to show crypto faucets and share strategies to make some money in crypto space.",
         tech: ["Vuejs", "Shlink", "crypto"],
@@ -56,6 +62,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 7,
         title: "TF2 Trading Utils",
         description: "A extension to help Team Fortress 2 players trading their items.",
         tech: ["Javascript", "Git"],
@@ -66,6 +73,7 @@ export const projects = [
         feature: true
     },
     {
+        id: 8,
         title: "utils.fborges.dev",
         description: "A extension to help Team Fortress 2 players trading their items.",
         tech: ["Javascript", "Git"],
@@ -76,6 +84,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 9,
         title: "PomoCore",
         description: "A website that applies the Pomodoro Technique to your tasks, helping you manage time, boost productivity, and track progress.",
         tech: ["Vue", "LocalStorage"],
@@ -85,6 +94,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 10,
         title: "faceitJS",
         description: "A API wrapper for faceit API to facilitate the usage.",
         tags: ["Opensource", "Package"],
@@ -95,6 +105,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 11,
         title: "backpacktfJS",
         description: "A API wrapper for backpack.tf API to facilitate the usage.",
         tags: ["Opensource", "Package"],
@@ -105,6 +116,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 12,
         title: "startproject cli",
         description: "A simple CLI tool to start a JS project in major frameworks.",
         tags: ["Opensource", "Package"],
@@ -115,6 +127,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 13,
         title: "goalVision",
         description: "Designed to bridge the gap between football coaches and players who are eager to take their skills to the next level.",
         tags: ["⏸️ Paused"],
@@ -124,6 +137,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 14,
         title: "Arquitecture Transformation",
         description: "Transform a monolithic application to a microservices architecture.",
         tech: ["Java", "Spring", "MySQL", "Docker", "UML"],
@@ -133,6 +147,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 15,
         title: "Handball Management System (HMS)",
         description: "Handle information of handball matches in real time.",
         tech: ["Java", "Spring", "Android Studio", "MySQL", "Docker", "UML"],
@@ -142,6 +157,7 @@ export const projects = [
         feature: false
     },
     {
+        id: 16,
         title: "Smart Urban Solution (SUS)",
         description: "Develop a parking management application and the gamification of a transportation application.",
         tech: ["Java", "Spring", "Kafka", "Android Studio", "MySQL", "Docker", "OpenCV", "NIOP", "IPCamera", "UML"],

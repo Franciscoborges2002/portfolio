@@ -1,0 +1,113 @@
+{
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "articles": "Articles"
+  },
+  "notch": {
+    "text": "Currently Working"
+  },
+  "aside": {
+    "role": "Master in Engineering and Management of Information Systems",
+    "working": "Working",
+    "location": "Portugal",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me",
+    "skills": "Skills",
+    "showMore": "Show more ({{count}} more)",
+    "showLess": "Show less",
+    "experience": "Experience",
+    "education": "Education",
+    "experienceItems": [
+      {
+        "period": "December 2024 - present",
+        "role": "Backend Developer",
+        "company": "ccg",
+        "companyUrl": "https://ccg.pt/",
+        "description": ""
+      },
+      {
+        "period": "November 2024 - present",
+        "role": "Mobile/Frontend Developer",
+        "company": "AIS.SC",
+        "companyUrl": "https://aissc.dsi.uminho.pt/",
+        "description": "Worked as lead mobile & frontend developer. Conducted a team of 3 developers to build the interface for the event application."
+      },
+      {
+        "period": "December 2022 - October 2023",
+        "role": "Backend Developer",
+        "company": "AIS.SC",
+        "companyUrl": "https://aissc.dsi.uminho.pt/",
+        "description": "Worked mainly in backend, modifying, upgrading and researching new features to service."
+      },
+      {
+        "period": "April 2022 - October 2024",
+        "role": "ioAcademy",
+        "company": "ioTech",
+        "companyUrl": "https://iotech.pt/",
+        "description": "Made various projects in trade of formation."
+      },
+      {
+        "period": "June 2022 - September 2022",
+        "role": "ioSummer - Internship",
+        "company": "ioTech",
+        "companyUrl": "https://iotech.pt/",
+        "description": "Made an integration between APIs for an Industry 4.0 project."
+      }
+    ],
+    "educationItems": [
+      {
+        "period": "September 2023 - Present",
+        "degree": "Master in Engineering and Management of Information Systems",
+        "institution": "Uminho",
+        "institutionUrl": "https://www.uminho.pt/PT",
+        "description": ""
+      },
+      {
+        "period": "September 2020 - June 2023",
+        "degree": "Bachelor in Engineering and Management of Information Systems",
+        "institution": "Uminho",
+        "institutionUrl": "https://www.uminho.pt/PT",
+        "description": "Finished with: 14.994/20"
+      }
+    ]
+  },
+  "home": {
+    "readmeTitle": "🙋 README.md",
+    "bio1": "My passion for technology ignited at a young age when I started to understood the essence of what a computer truly is.",
+    "bio2": "Before i got into university, I start learning programming and embarked on creating small projects and doing some automation on my daily tasks.",
+    "bio3": "Over time, these early efforts allowed me to improve my skills, progressively taking more complex projects with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to learn more.",
+    "highlightedProjects": "⭐ Highlighted Projects",
+    "moreProjects": "More Projects",
+    "articlesTitle": "📝 Articles",
+    "moreArticles": "More Articles"
+  },
+  "projects": {
+    "title": "Projects",
+    "github": "GitHub",
+    "live": "Live"
+  },
+  "articles": {
+    "title": "Articles",
+    "backToArticles": "Back to Articles",
+    "readOnMedium": "Read on Medium",
+    "tableOfContents": "📑 Table of Contents"
+  },
+  "technologies": {
+    "title": "Technologies & Skills",
+    "subtitle": "Tools and technologies I work with"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️ by"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Sorry, the page you are looking for does not exist!",
+    "home": "Home"
+  },
+  "language": {
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  }
+}

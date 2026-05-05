@@ -3,17 +3,14 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Pin, ExternalLink } from "lucide-react"
 import { projects } from "../data/projects"
-import Link from "next/link"
 import { siGithub } from "simple-icons"
 
 export default function HighlightedProjectsCard({ project }: { project: typeof projects[number] }) {
     return (
-
         <div className="grid gap-4">
             <Card className="group hover:shadow-md transition-shadow duration-200">
                 <CardContent className="p-0">
                     <div className="flex items-center p-6">
-                        {/* Project Info */}
                         <div className="flex-1 min-w-0">
                             <div className="flex items-start justify-between gap-4">
                                 <div className="flex-1">
@@ -21,9 +18,9 @@ export default function HighlightedProjectsCard({ project }: { project: typeof p
                                         <CardTitle className="text-lg leading-tight">{project.title}</CardTitle>
                                         <Pin className="w-4 h-4 text-muted-foreground" />
                                     </div>
-                                    <CardDescription className="text-sm mb-3 line-clamp-2">{project.description}</CardDescription>
-
-                                    {/* Custom Tags */}
+                                    <CardDescription className="text-sm mb-3 line-clamp-2">
+                                        {project.description}
+                                    </CardDescription>
                                     <div className="flex flex-wrap gap-1 mb-3">
                                         {project.tags && project.tags.map((tag) => (
                                             <Badge key={tag} variant="secondary" className="text-xs">
@@ -33,18 +30,17 @@ export default function HighlightedProjectsCard({ project }: { project: typeof p
                                     </div>
                                 </div>
 
-                                {/* Action Buttons */}
                                 <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                     {project.demo && (
                                         <Button size="sm" variant="outline" asChild className="cursor-pointer">
-                                            <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
                                                 <ExternalLink className="w-4 h-4 text-primary" />
-                                            </Link>
+                                            </a>
                                         </Button>
                                     )}
                                     {project.github && (
                                         <Button size="sm" variant="outline" asChild className="cursor-pointer">
-                                            <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer">
                                                 <svg
                                                     role="img"
                                                     viewBox="0 0 24 24"
@@ -56,7 +52,7 @@ export default function HighlightedProjectsCard({ project }: { project: typeof p
                                                     <title>{siGithub.title}</title>
                                                     <path d={siGithub.path} />
                                                 </svg>
-                                            </Link>
+                                            </a>
                                         </Button>
                                     )}
                                 </div>
