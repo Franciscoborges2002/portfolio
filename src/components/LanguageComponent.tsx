@@ -1,6 +1,5 @@
-"use client";
-
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import {
     DropdownMenu,
@@ -9,30 +8,29 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-// Add your supported languages here
 const LANGUAGES = [
-    { code: "en", label: "English", flag: "🇺🇸" }/* ,
+    { code: "en", label: "English", flag: "🇺🇸" },
     { code: "pt", label: "Português", flag: "🇵🇹" },
-    { code: "es", label: "Español", flag: "🇪🇸" }, */
 ];
 
 export function LanguageComponent() {
-    const [lang, setLang] = useState("en");
+    const { i18n } = useTranslation()
+    const [lang, setLang] = useState(i18n.language ?? "en")
 
     useEffect(() => {
-        const saved = localStorage.getItem("lang");
-        if (saved) setLang(saved);
-    }, []);
+        const saved = localStorage.getItem("lang")
+        if (saved) {
+            setLang(saved)
+            i18n.changeLanguage(saved)
+        }
+    }, [])
 
     const handleChange = (code: string) => {
-        setLang(code);
-        localStorage.setItem("lang", code);
+        setLang(code)
+        i18n.changeLanguage(code)
+    }
 
-        // If you're using Next.js i18n routing:
-        // window.location.href = `/${code}${window.location.pathname.replace(/^\\/..../, "")}`;
-    };
-
-    const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0];
+    const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0]
 
     return (
         <DropdownMenu>
@@ -55,5 +53,5 @@ export function LanguageComponent() {
                 ))}
             </DropdownMenuContent>
         </DropdownMenu>
-    );
+    )
 }

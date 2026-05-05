@@ -1,0 +1,113 @@
+{
+  "header": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "articles": "Artículos"
+  },
+  "notch": {
+    "text": "Actualmente Trabajando"
+  },
+  "aside": {
+    "role": "Máster en Ingeniería y Gestión de Sistemas de Información",
+    "working": "Trabajando",
+    "location": "Portugal",
+    "downloadCV": "Descargar CV",
+    "contactMe": "Contactar",
+    "skills": "Habilidades",
+    "showMore": "Ver más ({{count}} más)",
+    "showLess": "Ver menos",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "experienceItems": [
+      {
+        "period": "Diciembre 2024 - presente",
+        "role": "Desarrollador Backend",
+        "company": "ccg",
+        "companyUrl": "https://ccg.pt/",
+        "description": ""
+      },
+      {
+        "period": "Noviembre 2024 - presente",
+        "role": "Desarrollador Mobile/Frontend",
+        "company": "AIS.SC",
+        "companyUrl": "https://aissc.dsi.uminho.pt/",
+        "description": "Trabajé como desarrollador mobile y frontend principal. Lideré un equipo de 3 desarrolladores para construir la interfaz de la aplicación de eventos."
+      },
+      {
+        "period": "Diciembre 2022 - Octubre 2023",
+        "role": "Desarrollador Backend",
+        "company": "AIS.SC",
+        "companyUrl": "https://aissc.dsi.uminho.pt/",
+        "description": "Trabajé principalmente en backend, modificando, actualizando e investigando nuevas funcionalidades para el servicio."
+      },
+      {
+        "period": "Abril 2022 - Octubre 2024",
+        "role": "ioAcademy",
+        "company": "ioTech",
+        "companyUrl": "https://iotech.pt/",
+        "description": "Realicé varios proyectos a cambio de formación."
+      },
+      {
+        "period": "Junio 2022 - Septiembre 2022",
+        "role": "ioSummer - Pasantía",
+        "company": "ioTech",
+        "companyUrl": "https://iotech.pt/",
+        "description": "Realicé una integración entre APIs para un proyecto de Industria 4.0."
+      }
+    ],
+    "educationItems": [
+      {
+        "period": "Septiembre 2023 - Presente",
+        "degree": "Máster en Ingeniería y Gestión de Sistemas de Información",
+        "institution": "Uminho",
+        "institutionUrl": "https://www.uminho.pt/PT",
+        "description": ""
+      },
+      {
+        "period": "Septiembre 2020 - Junio 2023",
+        "degree": "Grado en Ingeniería y Gestión de Sistemas de Información",
+        "institution": "Uminho",
+        "institutionUrl": "https://www.uminho.pt/PT",
+        "description": "Finalizado con: 14.994/20"
+      }
+    ]
+  },
+  "home": {
+    "readmeTitle": "🙋 README.md",
+    "bio1": "Mi pasión por la tecnología se encendió a una edad temprana cuando comencé a entender la esencia de lo que es realmente un ordenador.",
+    "bio2": "Antes de entrar a la universidad, comencé a aprender programación y a crear pequeños proyectos, automatizando algunas tareas del día a día.",
+    "bio3": "Con el tiempo, esos primeros esfuerzos me permitieron mejorar mis habilidades, tomando proyectos progresivamente más complejos con confianza. Como persona, soy dedicado, ambicioso y siempre dispuesto a aprender más.",
+    "highlightedProjects": "⭐ Proyectos Destacados",
+    "moreProjects": "Más Proyectos",
+    "articlesTitle": "📝 Artículos",
+    "moreArticles": "Más Artículos"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "github": "GitHub",
+    "live": "Ver"
+  },
+  "articles": {
+    "title": "Artículos",
+    "backToArticles": "Volver a Artículos",
+    "readOnMedium": "Leer en Medium",
+    "tableOfContents": "📑 Tabla de Contenidos"
+  },
+  "technologies": {
+    "title": "Tecnologías y Habilidades",
+    "subtitle": "Herramientas y tecnologías con las que trabajo"
+  },
+  "footer": {
+    "madeWith": "Hecho con ❤️ por"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Lo sentimos, la página que buscas no existe.",
+    "home": "Inicio"
+  },
+  "language": {
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  }
+}

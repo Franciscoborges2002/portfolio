@@ -12,6 +12,8 @@ export default function PortfolioPage() {
 
   const newestArticles = getNewestArticles();
 
+  console.log(newestArticles)
+
   return (
     <div className="px-5 mx-auto">
       {/* RIGHT PART */}
@@ -29,6 +31,7 @@ export default function PortfolioPage() {
         </div>
 
 
+        {/* HIGHLITED PROJECTS */}
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl font-bold m-0">⭐Highlighted Projects</h2>
 
@@ -43,6 +46,7 @@ export default function PortfolioPage() {
           </Link>
         </div>
         <div className="flex flex-col gap-4">
+          {/* ARTICLES */}
           <h2 className="text-2xl font-bold m-0">📝 Articles</h2>
 
           {/* {Object.keys(newestArticles).map(([key, val], i) => (
