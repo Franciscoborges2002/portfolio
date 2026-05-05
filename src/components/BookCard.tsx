@@ -1,4 +1,5 @@
 import type { Book } from "@/data/books";
+import { Badge } from "./ui/badge";
 
 const statusConfig = {
   "currently-reading": { label: "Currently Reading", className: "bg-blue-500/20 text-blue-400 border-blue-500/30" },

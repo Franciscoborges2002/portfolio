@@ -32,7 +32,7 @@ export default function ArticlesPage() {
                 <h2 className="text-lg font-semibold">{year}</h2>
 
                 <div className="flex flex-col gap-2 pl-5">
-                  {articles.map((article) => (
+                  {articles.map((article: Article) => (
                     <div key={article.slug} className="flex flex-col gap-1">
                       <Link
                         to={`/articles/${article.slug}`}

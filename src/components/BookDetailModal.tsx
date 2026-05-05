@@ -58,7 +58,7 @@ export function BookDetailModal({ book, open, onOpenChange }: BookDetailModalPro
         </div>
 
         <div className="mt-2 space-y-4">
-          <div className="flex gap-6 text-sm">
+          {/* <div className="flex gap-6 text-sm">
             <div>
               <span className="text-white/40 text-xs uppercase tracking-wider">Started</span>
               <p className="text-white/70">{formatDate(book.startDate)}</p>
@@ -67,7 +67,7 @@ export function BookDetailModal({ book, open, onOpenChange }: BookDetailModalPro
               <span className="text-white/40 text-xs uppercase tracking-wider">Finished</span>
               <p className="text-white/70">{formatDate(book.finishDate)}</p>
             </div>
-          </div>
+          </div> */}
 
           {book.thoughts && (
             <div>
