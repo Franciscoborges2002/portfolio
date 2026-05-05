@@ -10,20 +10,21 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Trim dev deps AFTER the build (runtime only needs prod deps)
-RUN npm prune --omit=dev
-
 # ---------- runner ----------
-FROM node:20-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV=production
-ENV PORT=3001
+FROM nginx:alpine AS runner
 
-# Copy runtime artifacts
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package*.json ./
+# Copy Vite build output to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 3001
-CMD ["npm", "run", "start"]
+# Handle client-side routing (react-router-dom)
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html; \
+        try_files $uri $uri/ /index.html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

@@ -6,8 +6,5 @@ services:
       dockerfile: Dockerfile
       target: runner
     ports:
-      - "3001:3001"
-    environment:
-      NODE_ENV: production
-      PORT: 3001
+      - "3001:80"
     restart: unless-stopped
