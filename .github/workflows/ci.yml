@@ -1,39 +1,179 @@
-name: Build Verification
-
+name: CI
+ 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
+  schedule:
+    - cron: '0 8 * * 1'    # run every Monday at 8am UTC to catch new CVEs
+ 
 jobs:
-  build:
-    name: Vite Build
+  # -------------------------------------------------------
+  # Job 1: Install dependencies and cache them
+  # All other jobs depend on this one and restore the cache
+  # -------------------------------------------------------
+  install:
+    name: Install dependencies
     runs-on: ubuntu-latest
-
+ 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+ 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
+ 
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+          # key is based on package-lock.json hash —
+          # cache is only invalidated when dependencies actually change
+ 
       - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        # skips npm ci entirely if cache already exists
         run: npm ci
-
+ 
+  # -------------------------------------------------------
+  # Job 2: Lint (ESLint + Prettier)
+  # -------------------------------------------------------
+  lint:
+    name: ESLint & Prettier
+    runs-on: ubuntu-latest
+    needs: install     # waits for install job to finish
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+ 
+      - name: Restore node_modules from cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+ 
+      - name: Run ESLint
+        run: npm run lint
+ 
+      - name: Run Prettier check
+        run: npm run format:check
+ 
+  # -------------------------------------------------------
+  # Job 3: Build verification
+  # -------------------------------------------------------
+  build:
+    name: Vite Build
+    runs-on: ubuntu-latest
+    needs: install
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+ 
+      - name: Restore node_modules from cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+ 
       - name: Run Vite build
         run: npm run build
         env:
-          # Add your environment variables here if the build needs them
-          # VITE_API_URL: ${{ secrets.VITE_API_URL }}
           NODE_ENV: production
-
+          # VITE_API_URL: ${{ secrets.VITE_API_URL }}
+ 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dist-${{ github.sha }}   # unique name per commit
+          name: dist-${{ github.sha }}
           path: dist/
-          retention-days: 7              # keep for 7 days, then auto-delete
+          retention-days: 7
+ 
+  # -------------------------------------------------------
+  # Job 4: Docker build
+  # Only runs after Vite build passes — no point building
+  # a Docker image if the app itself is broken
+  # -------------------------------------------------------
+  docker-build:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: build
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
+      - name: Build Docker image
+        run: docker build -t myapp:${{ github.sha }} .
+ 
+      - name: Save Docker image to file
+        run: docker save myapp:${{ github.sha }} -o image.tar
+        # exports the image as a file so the next job can load it
+        # without rebuilding from scratch
+ 
+      - name: Upload Docker image artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-image-${{ github.sha }}
+          path: image.tar
+          retention-days: 1    # only needed briefly for the dockle job
+
+
+  # -------------------------------------------------------
+  # Job 5: Dependency security scan
+  # -------------------------------------------------------
+  dep-scan:
+    name: Dependency Security Scan
+    runs-on: ubuntu-latest
+    needs: install    # only needs source code + node_modules, not the Docker image
+ 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+ 
+      - name: Restore node_modules from cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('package-lock.json') }}
+ 
+      - name: Run npm audit
+        run: npm audit --audit-level=high
+ 
+      - name: Run Trivy filesystem scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: .
+          severity: HIGH,CRITICAL
+          exit-code: '1'
+          format: table
+ 
+      - name: Upload Trivy report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-report-${{ github.sha }}
+          path: trivy-results.txt
+          retention-days: 30
