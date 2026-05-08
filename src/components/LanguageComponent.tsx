@@ -15,22 +15,20 @@ const LANGUAGES = [
 
 export function LanguageComponent() {
     const { i18n } = useTranslation()
-    const [lang, setLang] = useState(i18n.language ?? "en")
 
     useEffect(() => {
         const saved = localStorage.getItem("lang")
         if (saved) {
-            setLang(saved)
-            i18n.changeLanguage(saved)
+            i18n.changeLanguage(saved)   // no setLang needed
         }
-    }, [])
+    }, [i18n])
 
     const handleChange = (code: string) => {
-        setLang(code)
-        i18n.changeLanguage(code)
+        localStorage.setItem("lang", code)
+        i18n.changeLanguage(code)        // no setLang needed
     }
 
-    const current = LANGUAGES.find((l) => l.code === lang) ?? LANGUAGES[0]
+    const current = LANGUAGES.find((l) => l.code === i18n.language) ?? LANGUAGES[0]
 
     return (
         <DropdownMenu>

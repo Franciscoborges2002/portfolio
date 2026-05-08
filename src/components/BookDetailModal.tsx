@@ -20,14 +20,14 @@ interface BookDetailModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-function formatDate(date: string | null) {
+/* function formatDate(date: string | null) {
   if (!date) return "—";
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
   });
-}
+} */
 
 export function BookDetailModal({ book, open, onOpenChange }: BookDetailModalProps) {
   if (!book) return null;
