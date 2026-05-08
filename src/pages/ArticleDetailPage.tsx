@@ -6,13 +6,13 @@ import { Badge } from '@/components/ui/badge'
 import { MarkdownViewer } from '@/components/MarkdownViewer'
 import { getArticleData } from '@/lib/articles';
 
-interface TocItem { title: string; id: string }
+/* interface TocItem { title: string; id: string }
 
 interface ArticleData {
     data: Record<string, unknown>
     content: string
     slug: string
-}
+} */
 
 //export default function ArticleDetailPage({ article }: { article: ArticleData }) {
 export default function ArticleDetailPage() {

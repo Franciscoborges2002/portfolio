@@ -1,10 +1,10 @@
 import { ProjectCard } from "@/components/ProjectCard";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+/* import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton"; */
 
 import { projects } from "@/data/projects";
 
-function ProjectSkeleton(){
+/* function ProjectSkeleton(){
   return (
     <Card className="flex flex-col overflow-hidden">
       <CardHeader className="p-0">
@@ -32,7 +32,7 @@ function ProjectSkeleton(){
       </CardFooter>
     </Card>
   );
-}
+} */
 
 export default function Projects() {
   return (
