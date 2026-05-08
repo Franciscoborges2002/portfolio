@@ -1,0 +1,33 @@
+name: Build & Scan Docker Image
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t myapp:${{ github.sha }} .
+
+      - name: Run Dockle security scan
+        uses: goodwithtech/dockle-action@main
+        with:
+          image: myapp:${{ github.sha }}
+          format: list
+          exit-code: '1'       # fail the pipeline on issues
+          exit-level: warn     # fail on WARN and above
+
+      - name: Push to registry (only on main)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login -u "${{ secrets.REGISTRY_USER }}" --password-stdin
+          docker tag myapp:${{ github.sha }} youruser/myapp:latest
+          docker push youruser/myapp:latest
