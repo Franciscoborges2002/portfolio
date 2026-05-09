@@ -37,9 +37,3 @@ jobs:
             --accept-key apkArch \
             --accept-key KEY_SHA512 \
             myapp:${{ github.sha }}
-      - name: Push to registry (only on main)
-        if: github.ref == 'refs/heads/main'
-        run: |
-          echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login -u "${{ secrets.REGISTRY_USER }}" --password-stdin
-          docker tag myapp:${{ github.sha }} youruser/myapp:latest
-          docker push youruser/myapp:latest
