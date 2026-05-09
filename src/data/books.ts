@@ -13,19 +13,17 @@ export interface Book {
 }
 
 export const books: Book[] = [
-    {
-        id: "1",
-        title: "Zero to One. Notes on Start Ups, or How to Build the Future",
-        author: "Peter Thiel",
-        year: 2015,
-        coverUrl: "https://m.media-amazon.com/images/I/71uAI28kJuL._SY342_.jpg",
-        status: "finished",
-        thoughts: "",
-        takeaways: [
-            "Teste"
-        ],
-        isbn: "9780753555200"
-    }/* ,
+  {
+    id: "1",
+    title: "Zero to One. Notes on Start Ups, or How to Build the Future",
+    author: "Peter Thiel",
+    year: 2015,
+    coverUrl: "https://m.media-amazon.com/images/I/71uAI28kJuL._SY342_.jpg",
+    status: "finished",
+    thoughts: "",
+    takeaways: ["Teste"],
+    isbn: "9780753555200",
+  } /* ,
     {
         id: "2",
         title: "The Richest Man in Babylon"
@@ -49,5 +47,5 @@ export const books: Book[] = [
     {
         id: 7,
         title: "Botchan"
-    } */
-]
+    } */,
+];

@@ -1,27 +1,30 @@
-import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
-import { Separator } from '@/components/ui/separator'
-import { getSortedArticlesData } from '@/lib/articles'
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Separator } from "@/components/ui/separator";
+import { getSortedArticlesData } from "@/lib/articles";
 
 interface Article {
-  slug: string
-  title: string
-  date: string
+  slug: string;
+  title: string;
+  date: string;
 }
 
 interface GroupedArticles {
-  [year: number]: Article[]
+  [year: number]: Article[];
 }
 
 export default function ArticlesPage() {
-  const { t } = useTranslation()
-  const { groupedArticles }: { groupedArticles: GroupedArticles } = getSortedArticlesData()
+  const { t } = useTranslation();
+  const { groupedArticles }: { groupedArticles: GroupedArticles } =
+    getSortedArticlesData();
 
   return (
     <section className="w-full px-5 mx-auto">
       <div id="articles">
         <div className="mb-8 flex items-center justify-between">
-          <h1 className="text-3xl font-bold tracking-tight">{t('articles.title')}</h1>
+          <h1 className="text-3xl font-bold tracking-tight">
+            {t("articles.title")}
+          </h1>
         </div>
 
         <div>
@@ -41,7 +44,9 @@ export default function ArticlesPage() {
                         <h3 className="text-sm font-medium text-muted-foreground">
                           {article.title}
                         </h3>
-                        <p className="text-xs text-muted-foreground/50">{article.date}</p>
+                        <p className="text-xs text-muted-foreground/50">
+                          {article.date}
+                        </p>
                       </Link>
                       <Separator />
                     </div>
@@ -52,5 +57,5 @@ export default function ArticlesPage() {
         </div>
       </div>
     </section>
-  )
+  );
 }

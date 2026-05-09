@@ -2,9 +2,18 @@ import type { Book } from "@/data/books";
 import { Badge } from "./ui/badge";
 
 const statusConfig = {
-  "currently-reading": { label: "Currently Reading", className: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
-  finished: { label: "Finished", className: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" },
-  "want-to-read": { label: "Want to Read", className: "bg-zinc-500/20 text-zinc-400 border-zinc-500/30" },
+  "currently-reading": {
+    label: "Currently Reading",
+    className: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  },
+  finished: {
+    label: "Finished",
+    className: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+  },
+  "want-to-read": {
+    label: "Want to Read",
+    className: "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
+  },
 };
 
 interface BookCardProps {

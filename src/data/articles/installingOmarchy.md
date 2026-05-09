@@ -5,18 +5,22 @@ date: "01/02/2026"
 tags: ["linux", "Omarchy"]
 #image: "/images/articles/ImplementingSSHRaspberryPi.png"
 #medium: "https://medium.com/@franciscomsborges2002"
-toc: [
+toc:
+  [
     { title: "Introduction", id: "introduction" },
     { title: "Reasons", id: "reasons" },
     { title: "The Begind", id: "begin" },
     { title: "The Big Shift", id: "big-shift" },
-    { title: "Instaling omarchy via Arch linux (Manual Installation)", id: "manual-installation" },
+    {
+      title: "Instaling omarchy via Arch linux (Manual Installation)",
+      id: "manual-installation",
+    },
     { title: "First Attempt", id: "manual-installation-first" },
     { title: "Second Attempt", id: "manual-installation-second" },
     { title: "Third Attempt", id: "manual-installation-third" },
     { title: "Bootloader Problem (Limine)", id: "bootloader-problem" },
-    { title: "Conclusion", id: "conclusion" }
-]
+    { title: "Conclusion", id: "conclusion" },
+  ]
 ---
 
 <span id="introduction"></span>
@@ -45,7 +49,7 @@ This is where I hit my first major roadblock. My wireless hardware had a malfunc
 iwctl
 ```
 
-and then: 
+and then:
 
 ```
 station list
@@ -71,10 +75,9 @@ Even though I was already using Arch linux, I felt that something was missing. I
 
 After some more digging, I found about [omarchy](https://omarchy.org/), an arch linux based distro that already offered a good set of tools out of the box. I decided to switch to omarchy and give it a try.
 
-I did a fresh install, following the same process as before: download the ISO image, flash it into a USB drive, boot from it, and install. It was one of the easiest OS (Operating System) installations I've ever done. However, the omarchy installer only allows installing on an entire disk. I didn’t know this at first, and it was not what I wanted for my setup. 
+I did a fresh install, following the same process as before: download the ISO image, flash it into a USB drive, boot from it, and install. It was one of the easiest OS (Operating System) installations I've ever done. However, the omarchy installer only allows installing on an entire disk. I didn’t know this at first, and it was not what I wanted for my setup.
 
 My goal was to keep a dual boot system: a linux distro for my developing ecosystem, and windows for my gaming setup.
-
 
 <span id="manual-installation"></span>
 
@@ -116,7 +119,7 @@ Easy enough, instaled again arch linux and omarchy. But this time, I ran into an
 
 Third time lucky.
 
-I started everything from scratch once again, but this time creating correctly the subvolumes in btrfs, and ***voilà*** it worked like a charm, omarchy was finally installed in my computer 🎉🎉.
+I started everything from scratch once again, but this time creating correctly the subvolumes in btrfs, and **_voilà_** it worked like a charm, omarchy was finally installed in my computer 🎉🎉.
 
 <span id="bootloader-problem"></span>
 

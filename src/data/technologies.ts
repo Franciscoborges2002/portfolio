@@ -1,8 +1,8 @@
 export type TechCategory = {
-  title: string
-  icon: LucideIconName
-  technologies: { name: string; color: keyof typeof colorMap }[]
-}
+  title: string;
+  icon: LucideIconName;
+  technologies: { name: string; color: keyof typeof colorMap }[];
+};
 
 //Hold the icons to use
 export type LucideIconName =
@@ -11,9 +11,9 @@ export type LucideIconName =
   | "Database"
   | "Smartphone"
   | "Palette"
-  | "Wrench"
+  | "Wrench";
 
-export type ColorKey = keyof typeof colorMap
+export type ColorKey = keyof typeof colorMap;
 
 export const colorMap = {
   react: "bg-blue-100 text-blue-800 border-blue-200",
@@ -40,7 +40,7 @@ export const colorMap = {
 
   git: "bg-orange-100 text-orange-800 border-orange-200",
   docker: "bg-blue-100 text-blue-800 border-blue-200",
-} as const
+} as const;
 
 export const techCategories: TechCategory[] = [
   {
@@ -86,9 +86,7 @@ export const techCategories: TechCategory[] = [
   {
     title: "Design",
     icon: "Palette",
-    technologies: [
-      { name: "Figma", color: "figma" },
-    ],
+    technologies: [{ name: "Figma", color: "figma" }],
   },
   {
     title: "Tools",
@@ -98,4 +96,4 @@ export const techCategories: TechCategory[] = [
       { name: "Docker", color: "docker" },
     ],
   },
-]
+];

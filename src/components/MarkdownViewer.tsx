@@ -1,5 +1,5 @@
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw'
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 export const MarkdownViewer = ({ content }: { content: string }) => (
   <div className="prose max-w-none prose-headings:text-foreground prose-p:text-secondary-foreground  prose-a:text-secondary-foreground  prose-a:no-underline prose-ul:text-secondary-foreground prose-ol:text-secondary-foreground prose-strong:text-secondary-foreground">
@@ -8,12 +8,7 @@ export const MarkdownViewer = ({ content }: { content: string }) => (
         a: ({ href, children }) => {
           const isExternal = href?.startsWith("http");
           if (!isExternal) {
-            return (
-              <a
-                href={href}>
-                {children}
-              </a>
-            )
+            return <a href={href}>{children}</a>;
           }
           return (
             <a
@@ -28,11 +23,11 @@ export const MarkdownViewer = ({ content }: { content: string }) => (
           );
         },
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h2: ({ node, ...props }) => (
-          <h2 {...props} className="scroll-mt-24" />
-        ),
+        h2: ({ node, ...props }) => <h2 {...props} className="scroll-mt-24" />,
       }}
       rehypePlugins={[rehypeRaw]}
-    >{content}</ReactMarkdown>
+    >
+      {content}
+    </ReactMarkdown>
   </div>
 );

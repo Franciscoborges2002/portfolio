@@ -22,8 +22,8 @@ jobs:
         with:
           image: myapp:${{ github.sha }}
           format: list
-          exit-code: '1'       # fail the pipeline on issues
-          exit-level: warn     # fail on WARN and above
+          exit-code: "1" # fail the pipeline on issues
+          exit-level: warn # fail on WARN and above
 
       - name: Push to registry (only on main)
         if: github.ref == 'refs/heads/main'

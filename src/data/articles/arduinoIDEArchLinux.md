@@ -5,14 +5,16 @@ date: "15/02/2026"
 tags: ["arduino", "arduino IDE", "arch linux", "Omarchy"]
 #image: "/images/articles/ImplementingSSHRaspberryPi.png"
 #medium: "https://medium.com/@franciscomsborges2002"
-toc: [
+toc:
+  [
     { title: "Introduction", id: "introduction" },
     { title: "Using Arduino IDE", id: "using-arduino-ide" },
     { title: "Making the first project", id: "first-project" },
-]
+  ]
 ---
 
 # Introduction
+
 <span id="introduction"></span>
 
 I recently bought my first Arduino board along with some sensors, and I wanted to start trying them. At the same time, I had recently moved all my development work to Arch Linux, more specifically, Omarchy ([arch linux (more precisely, omercy)](https://fborges.dev/articles/installingOmarchy)).
@@ -20,6 +22,7 @@ I recently bought my first Arduino board along with some sensors, and I wanted t
 In this blog post, I will walk through the installation process on arch linux and document of the issues i encountered, along with their solutions.
 
 # Installing IDE
+
 <span id="installing-ide"></span>
 
 Since I wanted do learn more about arch, i decided to install the Arduino IDE using the AUR (Arch User Repository).
@@ -36,7 +39,7 @@ Next, I entered the directory and build the package:
 makepkg -si
 ```
 
-Surprisingly, the installation worked on the first try :) 
+Surprisingly, the installation worked on the first try :)
 
 After that, I attempted to launch the IDE using:
 
@@ -65,6 +68,7 @@ alias arduinox="arduino-ide --ozone-platform=x11"
 Now, running `arduinox` starts the IDE correctly.
 
 # Using Arduino IDE
+
 <span id="using-arduino-ide"></span>
 
 Installing the IDE was straightforward. Uploading code to the board was not.
@@ -91,6 +95,7 @@ After applying this change, it worked :).
 The solution is quite understandable, as the port does not have permission to send the arduino sketch to the arduino UNO i was using, so chmod it, made a lot of sense. Altough it works, it's not a permanent change, as to maek a permanent change it's needed to add the the user to the appropriate group.
 
 # Making the first project
+
 <span id="first-project"></span>
 
 To effectively test if everything is working, let's make one of the simplest projects in arduino, a simple [blink light](https://docs.arduino.cc/built-in-examples/basics/Blink/) using the breadboard.

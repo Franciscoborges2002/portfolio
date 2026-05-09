@@ -8,7 +8,7 @@ import { getNewestArticles } from "@/lib/articles";
 import HighlightedProjectsCard from "@/components/HighlightedProjectsCard";
 import Technologies from "@/components/TechnologiesComponent";
 
-export default function PortfolioPage(){
+export default function PortfolioPage() {
   const featureProjects = projects.filter((project) => project.feature);
   const newestArticles = getNewestArticles();
 
@@ -65,9 +65,7 @@ export default function PortfolioPage(){
               className="p-5 pb-1 rounded-xl transition-all duration-300 flex flex-col gap-2 no-underline hover:bg-muted/30"
             >
               <div className="flex flex-row items-center justify-between mb-4">
-                <h2 className="text-lg m-0 no-underline">
-                  {article.title}
-                </h2>
+                <h2 className="text-lg m-0 no-underline">{article.title}</h2>
                 <p className="text-xs text-muted-foreground m-0">
                   {article.date}
                 </p>

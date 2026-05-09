@@ -1,13 +1,13 @@
-import { Routes, Route } from 'react-router-dom'
-import { ThemeProvider } from '@/components/ThemeProvider'
-import { Header } from '@/components/HeaderComponent'
-import { Footer } from '@/components/FooterComponent'
-import InfoAside from '@/components/InfoAsideComponent'
-import PortfolioPage from '@/pages/PortfolioPage'
-import ProjectsPage from '@/pages/ProjectsPage'
-import ArticlesPage from '@/pages/ArticlesPage'
-import ArticleDetailPage from '@/pages/ArticleDetailPage'
-import NotFound from '@/pages/NotFoundPage'
+import { Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/HeaderComponent";
+import { Footer } from "@/components/FooterComponent";
+import InfoAside from "@/components/InfoAsideComponent";
+import PortfolioPage from "@/pages/PortfolioPage";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ArticlesPage from "@/pages/ArticlesPage";
+import ArticleDetailPage from "@/pages/ArticleDetailPage";
+import NotFound from "@/pages/NotFoundPage";
 
 export default function App() {
   return (
@@ -18,14 +18,14 @@ export default function App() {
           <InfoAside />
         </div>
         <Routes>
-          <Route path="/"               element={<PortfolioPage />} />
-          <Route path="/projects"       element={<ProjectsPage />} />
-          <Route path="/articles"       element={<ArticlesPage />} />
+          <Route path="/" element={<PortfolioPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/:slug" element={<ArticleDetailPage />} />
-          <Route path="*"               element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
     </ThemeProvider>
-  )
+  );
 }

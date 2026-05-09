@@ -5,15 +5,16 @@ date: "30/11/2024"
 tags: ["SSH", "Raspberry Pi"]
 image: "/images/articles/ImplementingSSHRaspberryPi.png"
 medium: "https://medium.com/@franciscomsborges2002"
-toc: [
+toc:
+  [
     { title: "Introduction", id: "introduction" },
     { title: "What You’ll Need", id: "what-youll-need" },
     { title: "Step 1: Enable SSH", id: "step-1-enable-ssh" },
     { title: "Step 2: Find IP Address", id: "step-2-find-ip" },
     { title: "Step 3: SSH into the Raspberry Pi", id: "step-3-ssh-into-pi" },
     { title: "Step 4: Secure SSH", id: "step-4-secure-ssh" },
-    { title: "Conclusion", id: "conclusion" }
-]
+    { title: "Conclusion", id: "conclusion" },
+  ]
 ---
 
 <span id="introduction"></span>

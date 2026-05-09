@@ -4,11 +4,12 @@ title: "Shipped an utils website"
 date: "19/11/2025"
 tags: ["Web development Utils", "Utils"]
 image: "/images/articles/utilsWebsiteLaunch.png"
-toc: [
+toc:
+  [
     { title: "Introduction", id: "introduction" },
     { title: "Features", id: "features" },
-    { title: "Roadmap", id: "roadmap" }
-]
+    { title: "Roadmap", id: "roadmap" },
+  ]
 ---
 
 <span id="introduction"></span>
