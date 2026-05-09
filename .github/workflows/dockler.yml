@@ -35,6 +35,7 @@ jobs:
             --accept-key PKG_RELEASE \
             --accept-key DYNPKG_RELEASE \
             --accept-key apkArch \
+            --accept-key KEY_SHA512 \
             myapp:${{ github.sha }}
       - name: Push to registry (only on main)
         if: github.ref == 'refs/heads/main'
