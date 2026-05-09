@@ -17,11 +17,16 @@ jobs:
       - name: Build Docker image
         run: docker build -t myapp:${{ github.sha }} .
 
-      - name: Run Dockle security scan
+      - name: Install Dockle
         run: |
-          docker run --rm \ 
-            -v /var/run/docker.sock:/var/run/docker.sock \
-            goodwithtech/dockle:latest \
+          VERSION=$(curl --silent "https://api.github.com/repos/goodwithtech/dockle/releases/latest" | \
+            grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
+          curl -L -o dockle.deb https://github.com/goodwithtech/dockle/releases/download/v${VERSION}/dockle_${VERSION}_Linux-64bit.deb
+          sudo dpkg -i dockle.deb && rm dockle.deb
+
+      - name: Run Dockle
+        run: |
+          dockle \
             --exit-code 1 \
             --exit-level warn \
             --accept-key NGINX_VERSION \
