@@ -1,4 +1,4 @@
-name: Build & Scan Docker Image
+name: Build & Scan Docker Image with dockle
 
 on:
   push:
@@ -24,6 +24,7 @@ jobs:
           format: list
           exit-code: "1" # fail the pipeline on issues
           exit-level: warn # fail on WARN and above
+          accept-keys: NGINX_VERSION,NJS_VERSION,NJS_RELEASE,PKG_RELEASE,DYNPKG_RELEASE
 
       - name: Push to registry (only on main)
         if: github.ref == 'refs/heads/main'
