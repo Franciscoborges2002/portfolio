@@ -18,14 +18,19 @@ jobs:
         run: docker build -t myapp:${{ github.sha }} .
 
       - name: Run Dockle security scan
-        uses: goodwithtech/dockle-action@main
-        with:
-          image: myapp:${{ github.sha }}
-          format: list
-          exit-code: "1" # fail the pipeline on issues
-          exit-level: warn # fail on WARN and above
-          accept-keys: NGINX_VERSION,NJS_VERSION,NJS_RELEASE,PKG_RELEASE,DYNPKG_RELEASE,apkArch
-
+        run: |
+          docker run --rm \ 
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            goodwithtech/dockle:latest \
+            --exit-code 1 \
+            --exit-level warn \
+            --accept-key NGINX_VERSION \
+            --accept-key NJS_VERSION \
+            --accept-key NJS_RELEASE \
+            --accept-key PKG_RELEASE \
+            --accept-key DYNPKG_RELEASE \
+            --accept-key apkArch \
+            myapp:${{ github.sha }}
       - name: Push to registry (only on main)
         if: github.ref == 'refs/heads/main'
         run: |
