@@ -8,6 +8,7 @@ on:
 
 jobs:
   build-and-scan:
+    name: Run Dockle
     runs-on: ubuntu-latest
 
     steps:
