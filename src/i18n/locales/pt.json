@@ -2,7 +2,8 @@
   "header": {
     "home": "Início",
     "projects": "Projetos",
-    "articles": "Artigos"
+    "articles": "Artigos",
+    "books": "Livros"
   },
   "notch": {
     "text": "Atualmente a Trabalhar"
@@ -86,6 +87,15 @@
     "title": "Projetos",
     "github": "GitHub",
     "live": "Ver"
+  },
+  "books": {
+    "title": "Livros",
+    "status": {
+      "currently-reading": "A Ler",
+      "finished": "Lido",
+      "abandoned": "Abandonado",
+      "want-to-read": "Quero Ler"
+    }
   },
   "articles": {
     "title": "Artigos",

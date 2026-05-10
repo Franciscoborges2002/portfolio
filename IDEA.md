@@ -1,1 +1,3 @@
 https://nextjs.org/learn-pages-router/basics/data-fetching/implement-getstaticprops
+
+teste
