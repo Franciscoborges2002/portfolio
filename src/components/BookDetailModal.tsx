@@ -21,6 +21,10 @@ const statusConfig = {
     label: "Want to Read",
     className: "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
   },
+  abandoned: {
+    label: "Abandoned",
+    className: "bg-red-500/20 text-red-400 border-red-500/30",
+  },
 };
 
 interface BookDetailModalProps {
@@ -28,15 +32,6 @@ interface BookDetailModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
-
-/* function formatDate(date: string | null) {
-  if (!date) return "—";
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-} */
 
 export function BookDetailModal({
   book,
@@ -48,7 +43,7 @@ export function BookDetailModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="border-white/10 bg-zinc-900 text-white sm:max-w-lg max-h-[85vh] overflow-y-auto">
+      <DialogContent className="border-border bg-background text-foreground sm:max-w-lg max-h-[85vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="sr-only">{book.title}</DialogTitle>
           <DialogDescription className="sr-only">
@@ -64,11 +59,13 @@ export function BookDetailModal({
           />
           <div className="flex flex-col justify-between py-1">
             <div>
-              <h2 className="text-lg font-bold leading-tight text-white/95">
+              <h2 className="text-lg font-bold leading-tight text-foreground">
                 {book.title}
               </h2>
-              <p className="mt-1 text-sm text-white/50">{book.author}</p>
-              <p className="text-xs text-white/30">{book.year}</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {book.author}
+              </p>
+              <p className="text-xs text-muted-foreground">{book.year}</p>
             </div>
             <Badge className={`w-fit text-[11px] ${status.className}`}>
               {status.label}
@@ -76,24 +73,18 @@ export function BookDetailModal({
           </div>
         </div>
 
-        <div className="mt-2 space-y-4">
-          {/* <div className="flex gap-6 text-sm">
-            <div>
-              <span className="text-white/40 text-xs uppercase tracking-wider">Started</span>
-              <p className="text-white/70">{formatDate(book.startDate)}</p>
-            </div>
-            <div>
-              <span className="text-white/40 text-xs uppercase tracking-wider">Finished</span>
-              <p className="text-white/70">{formatDate(book.finishDate)}</p>
-            </div>
-          </div> */}
+        <div className="flex gap-4 text-xs text-muted-foreground">
+          <p>ISBN: {book.isbn}</p>
+          <p>Language: {book.language}</p>
+        </div>
 
+        <div className="mt-2 space-y-4">
           {book.thoughts && (
             <div>
-              <h3 className="text-xs uppercase tracking-wider text-white/40 mb-1">
+              <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
                 My Thoughts
               </h3>
-              <p className="text-sm leading-relaxed text-white/70">
+              <p className="text-sm leading-relaxed text-foreground/70">
                 {book.thoughts}
               </p>
             </div>
@@ -101,13 +92,13 @@ export function BookDetailModal({
 
           {book.takeaways.length > 0 && (
             <div>
-              <h3 className="text-xs uppercase tracking-wider text-white/40 mb-2">
+              <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
                 Key Takeaways
               </h3>
               <ul className="space-y-1.5">
                 {book.takeaways.map((t, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-white/70">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/30" />
+                  <li key={i} className="flex gap-2 text-sm text-foreground/70">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/30" />
                     {t}
                   </li>
                 ))}

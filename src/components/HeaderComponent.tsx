@@ -29,6 +29,9 @@ export function Header() {
             <Link to="/articles" className="px-2 py-1 rounded hover:bg-white/5">
               {t("header.articles")}
             </Link>
+            <Link to="/books" className="px-2 py-1 rounded hover:bg-white/5">
+              {t("header.books")}
+            </Link>
             <LanguageComponent />
             <ThemeToggle />
           </nav>
@@ -75,6 +78,12 @@ export function Header() {
                   to="/articles"
                 >
                   {t("header.articles")}
+                </Link>
+                <Link
+                  className="block px-3 py-2 rounded hover:bg-white/5"
+                  to="/books"
+                >
+                  {t("header.books")}
                 </Link>
                 <div className="flex flex-row items-center gap-2 px-3">
                   <Button className="w-5 h-10" variant="outline">

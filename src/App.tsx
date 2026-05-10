@@ -7,6 +7,7 @@ import PortfolioPage from "@/pages/PortfolioPage";
 import ProjectsPage from "@/pages/ProjectsPage";
 import ArticlesPage from "@/pages/ArticlesPage";
 import ArticleDetailPage from "@/pages/ArticleDetailPage";
+import BooksPage from "@/pages/BooksPage";
 import NotFound from "@/pages/NotFoundPage";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           <Route path="/articles/:slug" element={<ArticleDetailPage />} />
+          <Route path="/books" element={<BooksPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

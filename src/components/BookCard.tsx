@@ -14,6 +14,10 @@ const statusConfig = {
     label: "Want to Read",
     className: "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
   },
+  abandoned: {
+    label: "Abandoned",
+    className: "bg-red-500/20 text-red-400 border-red-500/30",
+  },
 };
 
 interface BookCardProps {
