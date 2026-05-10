@@ -2,9 +2,17 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 export const MarkdownViewer = ({ content }: { content: string }) => (
-  <div className="prose max-w-none prose-headings:text-foreground prose-p:text-secondary-foreground  prose-a:text-secondary-foreground  prose-a:no-underline prose-ul:text-secondary-foreground prose-ol:text-secondary-foreground prose-strong:text-secondary-foreground">
+  <div className="prose max-w-none dark:prose-invert prose-headings:text-foreground prose-p:text-secondary-foreground prose-a:text-secondary-foreground prose-a:no-underline prose-ul:text-secondary-foreground prose-ol:text-secondary-foreground prose-strong:text-secondary-foreground prose-code:bg-muted prose-code:text-foreground prose-code:rounded prose-code:px-1 prose-code:py-0.5 prose-code:text-sm prose-code:font-mono">
     <ReactMarkdown
       components={{
+        img: ({ src, alt }) => (
+          <img
+            src={src}
+            alt={alt ?? ""}
+            className="w-full rounded-xl my-4 object-cover"
+            loading="lazy"
+          />
+        ),
         a: ({ href, children }) => {
           const isExternal = href?.startsWith("http");
           if (!isExternal) {

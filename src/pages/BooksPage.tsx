@@ -28,7 +28,7 @@ export default function BooksPage() {
   })).filter((g) => g.items.length > 0);
 
   return (
-    <div className="w-full px-5 mx-auto">
+    <div className="w-full px-5 mx-auto pt-20">
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">
           {t("books.title")}

@@ -36,7 +36,7 @@ import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <div className="w-full px-5 mx-auto">
+    <div className="w-full px-5 mx-auto pt-20">
       <div id="projects">
         <div className="mb-8 flex items-center justify-between">
           <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
