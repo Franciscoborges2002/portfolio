@@ -1,6 +1,6 @@
 ---
 id: 6
-title: "Installing arduino ide in Archlinux"
+title: "Installing arduino ide in Archlinux (Omarchy)"
 date: "15/02/2026"
 tags: ["arduino", "arduino IDE", "arch linux", "Omarchy"]
 #image: "/images/articles/ImplementingSSHRaspberryPi.png"

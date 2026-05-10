@@ -19,7 +19,7 @@ export default function ArticlesPage() {
     getSortedArticlesData();
 
   return (
-    <section className="w-full px-5 mx-auto">
+    <section className="w-full px-5 mx-auto pt-20">
       <div id="articles">
         <div className="mb-8 flex items-center justify-between">
           <h1 className="text-3xl font-bold tracking-tight">
