@@ -1,80 +1,102 @@
 # My Portfolio
 
-This is the source code for my personal portfolio website, built with Next.js and TypeScript. It's designed to showcase my projects, experience, and skills—ideal as a template or starting point for others.
+**Live at [fborges.dev](https://fborges.dev)**
+
+Source code for my personal portfolio website, built with **Vite + React + TypeScript**. Showcases my projects, articles, books, experience, and skills.
 
 ---
 
-## 🚀 Features
+## Features
 
-- **Built with Next.js** and TypeScript for modern SSR and developer experience.
-- Styled using **Tailwind CSS**.
-- Custom fonts optimized with `next/font`.
-- Includes MDX support for content flexibility.
-- Deployed easily on **Coolify**.
+- **Vite + React + TypeScript** — fast dev server and build toolchain
+- **Tailwind CSS v4** — utility-first styling with dark/light/system theme support
+- **shadcn/ui** — accessible component primitives built on Radix UI
+- **React Router v7** — client-side routing (Home, Projects, Articles, Books)
+- **react-i18next** — full i18n support in English, Portuguese, and Spanish
+- **Markdown articles** — rendered via `react-markdown` with frontmatter parsing
+- **ESLint v9** — flat config with TypeScript, React Hooks, and React Refresh rules
+- **Docker** — containerised for self-hosted deployment
+- **GitHub Actions CI** — lint, build, and dependency security scan on every push
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16+ recommended)
-- Yarn, npm, pnpm, or bun package manager
+- Node.js v20+
+- npm
 
 ### Installation
 
 ```bash
 git clone https://github.com/Franciscoborges2002/portfolio.git
 cd portfolio
-npm install     # or yarn / pnpm install / bun install
+npm install
 ```
 
-### Running Localy
+### Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Navigate to http://localhost:3000 in your browser—any changes to app/page.tsx will live‑reload.
+Navigate to `http://localhost:5173` — changes hot-reload automatically.
 
-## 📦 Deployment
+### Other Scripts
 
-This project works seamlessly with Vercel, the platform created by the Next.js team. For deployment:
+| Command                | Description                                      |
+| ---------------------- | ------------------------------------------------ |
+| `npm run dev`          | Run project in development mode                  |
+| `npm run build`        | Type-check and build for production              |
+| `npm run preview`      | Preview the production build locally             |
+| `npm run lint`         | Run ESLint across the project                    |
+| `npm run format`       | Run Prettier across the project                  |
+| `npm run format:check` | Verify Prettier verifications across the project |
 
-1. Connect your GitHub repository in Vercel.
+## Project Structure
 
-2. Trigger a production build (automatically on push to main).
+```
+src/
+├── components/       # Reusable UI components (Header, BookCard, MarkdownViewer, …)
+├── data/             # Static data — projects, books, articles (Markdown)
+├── i18n/             # react-i18next config and locale JSON files (en, pt, es)
+├── lib/              # Utilities (article parsing, helpers)
+├── pages/            # Route-level page components
+└── index.css         # Global styles and Tailwind theme tokens
+```
 
-3. Your portfolio goes live on your personal domain or .vercel.app subdomain.
+## Deployment
 
-## 🔧 Configuration
+The project is containerised with Docker and deployed via **Coolify** at [fborges.dev](https://fborges.dev).
 
-1. Font preferences are set using next/font and configured in next.config.ts.
+### Docker
 
-2. Styles are defined in tailwind.config.ts.
+The image uses a two-stage build:
 
-3. Code checks via ESLint and TypeScript, configured in .eslintrc.json and tsconfig.json.
+1. **Builder** — `node:24-alpine` installs dependencies and runs `npm run build`
+2. **Runner** — `nginx:1.27-alpine` serves the static `dist/` output on port `8080`, with `try_files` configured for client-side routing
 
-4. You can change all information at the components.
+```bash
+docker build -t portfolio .
+docker run -p 8080:8080 portfolio
+```
 
-## 🎓 Why this setup?
+### CI/CD — GitHub Actions
 
-1. Clean and powerful Next.js + TypeScript integration.
+The pipeline runs on every push to `main`:
 
-2. Tailwind CSS for utility‑first styling speed.
+1. **Install** — caches `node_modules` keyed on `package-lock.json`
+2. **Lint** — ESLint check
+3. **Build** — Vite production build, artifact uploaded
+4. **Security scan** — `npm audit` + Trivy filesystem scan
+5. **Run Dockle** — run `dockle` command on docker image
 
-3. High‑quality developer experience with fast refresh, linting, and type safety.
+## Configuration
 
-## 🧩 Contributors
+- Content lives in `src/data/` — edit `projects.ts`, `books.ts`, and the Markdown files under `data/articles/`
+- Translations are in `src/i18n/locales/{en,pt,es}.json`
+- Theme tokens are defined in `src/index.css`
+- ESLint rules are in `eslint.config.js`
 
-Contributions are welcome! Feel free to open an issue or submit a pull request with improvements, bug fixes, or feature enhancements.
+## License
 
-## ⚖️ License
-
-Released under the [MIT License](./LICENSE). Feel free to reuse or adapt this code for personal or professional use.
-
-test
+Released under the [MIT License](./LICENSE).
