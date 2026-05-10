@@ -13,8 +13,14 @@ RUN npm run build
 # ---------- runner ----------
 FROM nginx:1.27-alpine AS runner
 
+# Install wget for healthcheck
+RUN apk add --no-cache wget
+
 # Copy Vite build output to nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Override nginx.conf to remove the user directive (we run as non-root)
+RUN sed -i 's/^user\s*nginx;//' /etc/nginx/nginx.conf
 
 # Handle client-side routing (react-router-dom)
 RUN echo 'server { \
