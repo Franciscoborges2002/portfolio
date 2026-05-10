@@ -13,6 +13,9 @@ RUN npm run build
 # ---------- runner ----------
 FROM nginx:1.27-alpine AS runner
 
+# Install wget for healthcheck
+RUN apk add --no-cache wget
+
 # Copy Vite build output to nginx
 COPY --from=builder /app/dist /usr/share/nginx/html
 
