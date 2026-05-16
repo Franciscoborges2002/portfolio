@@ -2,10 +2,8 @@ import { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectDetailModal } from "@/components/ProjectDetailModal";
 import { projects, type Project } from "@/data/projects";
-import { useTranslation } from "react-i18next";
 
 export default function Projects() {
-  const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
 
