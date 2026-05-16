@@ -9,8 +9,10 @@ import { Button } from "@/components/ui/button";
 import { SiLeetcode } from "react-icons/si";
 import { siGithub, siTryhackme } from "simple-icons";
 import { techCategories, colorMap } from "@/data/technologies";
+import { useTranslation } from "react-i18next";
 
 export function InformationComponent() {
+  const { t } = useTranslation();
   const allTechs = techCategories.flatMap((category) => category.technologies);
   const [showAll, setShowAll] = useState(false);
   const visibleTechs = showAll ? allTechs : allTechs.slice(0, 5);
@@ -30,7 +32,7 @@ export function InformationComponent() {
             <div>
               <CardTitle>Francisco Borges</CardTitle>
               <p className="text-muted-foreground">
-                Master in Engineering and Management of Information Systems{" "}
+                {t("aside.role")}{" "}
                 <a
                   href="https://www.uminho.pt/PT"
                   target="_blank"
@@ -41,7 +43,7 @@ export function InformationComponent() {
                 </a>
               </p>
               <p className="text-muted-foreground">
-                Working{" "}
+                {t("aside.working")}{" "}
                 <a
                   href="https://www.ccg.pt/"
                   target="_blank"
@@ -68,11 +70,13 @@ export function InformationComponent() {
                 rel="noopener noreferrer"
                 download
               >
-                Download CV
+                {t("aside.downloadCV")}
               </a>
             </Button>
             <Button asChild className="w-full">
-              <a href="mailto:franciscomsborges2002@gmail.com">Contact Me</a>
+              <a href="mailto:franciscomsborges2002@gmail.com">
+                {t("aside.contactMe")}
+              </a>
             </Button>
 
             <Separator />
@@ -178,9 +182,7 @@ export function InformationComponent() {
               className="mt-2 text-sm text-primary hover:text-primary/60 transition-all duration-200 cursor-pointer"
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll
-                ? "Show less"
-                : `Show more (${allTechs.length - 5} more)`}
+              {showAll ? t("aside.showLess") : t("aside.showMore")}
             </button>
           )}
         </CardContent>
@@ -188,7 +190,7 @@ export function InformationComponent() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Experience</CardTitle>
+          <CardTitle>{t("aside.experience")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <div className="relative pt-4">
@@ -266,7 +268,7 @@ export function InformationComponent() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Education</CardTitle>
+          <CardTitle>{t("aside.education")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <div className="relative pt-4">

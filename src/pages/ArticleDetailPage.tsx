@@ -27,7 +27,7 @@ export default function ArticleDetailPage() {
   console.log(content);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen px-5 bg-background">
       <main className="container mx-auto p-4 pt-2 pb-20 lg:px-20 flex flex-col gap-6">
         <div className="flex items-center justify-between">
           <Link to="/articles" className="flex items-center hover:underline">
