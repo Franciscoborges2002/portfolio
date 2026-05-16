@@ -30,7 +30,7 @@ export default function HighlightedProjectsCard({
                     <Pin className="w-4 h-4 text-muted-foreground" />
                   </div>
                   <CardDescription className="text-sm mb-3 line-clamp-2">
-                    {project.description}
+                    {project.shortDescription}
                   </CardDescription>
                   <div className="flex flex-wrap gap-1 mb-3">
                     {project.tags &&

@@ -7,17 +7,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { projects } from "../data/projects";
+import type { Project } from "@/data/projects";
 
 export function ProjectCard({
   project,
+  onClick,
 }: {
-  project: (typeof projects)[number];
+  project: Project;
+  onClick: () => void;
 }) {
   return (
-    <Card className="flex flex-col overflow-hidden">
+    <Card
+      className="flex flex-col overflow-hidden cursor-pointer transition-shadow hover:shadow-lg"
+      onClick={onClick}
+    >
       <CardHeader className="p-0 pb-3">
-        <div className="relative overflow-hidden cursor-pointer">
+        <div className="relative overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
@@ -29,30 +34,24 @@ export function ProjectCard({
         <CardTitle className="mb-2 flex flex-col gap-2">
           <h3>{project.title}</h3>
           {project.tags && (
-            <div className="flex flex-row gap-2">
-              {project.tags.map((tag, tagIndex) => (
-                <Badge
-                  key={tagIndex}
-                  variant="secondary"
-                  className="cursor-pointer"
-                >
+            <div className="flex flex-row flex-wrap gap-2">
+              {project.tags.map((tag, i) => (
+                <Badge key={i} variant="secondary">
                   {tag}
                 </Badge>
               ))}
             </div>
           )}
         </CardTitle>
-        <p className="text-muted-foreground mb-4">{project.description}</p>
+        <p className="text-muted-foreground mb-4 line-clamp-2">
+          {project.shortDescription}
+        </p>
         {project.tech && (
           <div className="flex flex-row gap-2">
             <h3>Tech</h3>
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech, techIndex) => (
-                <Badge
-                  key={techIndex}
-                  variant="secondary"
-                  className="cursor-pointer"
-                >
+              {project.tech.map((tech, i) => (
+                <Badge key={i} variant="secondary">
                   {tech}
                 </Badge>
               ))}
@@ -61,7 +60,10 @@ export function ProjectCard({
         )}
       </CardContent>
       <CardFooter className="mt-auto">
-        <div className="w-full flex flex-row justify-between">
+        <div
+          className="w-full flex flex-row justify-between"
+          onClick={(e) => e.stopPropagation()}
+        >
           {project.github && (
             <a
               href={project.github}

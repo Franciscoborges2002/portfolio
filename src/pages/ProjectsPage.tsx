@@ -1,40 +1,17 @@
+import { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
-/* import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton"; */
-
-import { projects } from "@/data/projects";
-
-/* function ProjectSkeleton(){
-  return (
-    <Card className="flex flex-col overflow-hidden">
-      <CardHeader className="p-0">
-        <Skeleton className="h-48 w-full" />
-      </CardHeader>
-
-      <CardContent className="flex-grow">
-        <Skeleton className="h-6 w-2/3 mb-2" />
-        <Skeleton className="h-4 w-full mb-2" />
-        <Skeleton className="h-4 w-full mb-2" />
-        <Skeleton className="h-4 w-2/3 mb-4" />
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          <Skeleton className="h-5 w-16" />
-          <Skeleton className="h-5 w-16" />
-          <Skeleton className="h-5 w-16" />
-        </div>
-      </CardContent>
-
-      <CardFooter className="mt-auto">
-        <div className="flex gap-2">
-          <Skeleton className="h-9 w-24" />
-          <Skeleton className="h-9 w-24" />
-        </div>
-      </CardFooter>
-    </Card>
-  );
-} */
+import { ProjectDetailModal } from "@/components/ProjectDetailModal";
+import { projects, type Project } from "@/data/projects";
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  function handleProjectClick(project: Project) {
+    setSelectedProject(project);
+    setModalOpen(true);
+  }
+
   return (
     <div className="w-full px-5 mx-auto pt-20">
       <div id="projects">
@@ -44,10 +21,20 @@ export default function Projects() {
 
         <div className="grid gap-6 grid-cols-1 xl:grid-cols-2">
           {projects.map((project) => (
-            <ProjectCard key={project.id ?? project.title} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={() => handleProjectClick(project)}
+            />
           ))}
         </div>
       </div>
+
+      <ProjectDetailModal
+        project={selectedProject}
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+      />
     </div>
   );
 }
