@@ -15,11 +15,11 @@ export default function PortfolioPage() {
   const newestArticles = getNewestArticles();
 
   return (
-    <div className="px-5 mx-auto pt-20">
+    <div className="px-5">
       <div className="space-y-0 prose dark:prose-invert max-w-none">
         {/* README */}
         <div className="flex flex-col gap-0">
-          <h2 className="text-2xl font-bold m-0">{t("home.readmeTitle")}</h2>
+          <h2 className="text-2xl font-bold mt-0">{t("home.readmeTitle")}</h2>
           <Card className="">
             <CardContent className="pt-2 pb-2 space-y-2">
               <p className="m-0">Refactor</p>

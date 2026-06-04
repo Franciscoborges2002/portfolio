@@ -8,16 +8,12 @@ interface NotchHeaderProps {
   isActive: boolean;
 }
 
-/*
-    Aplicar media queries
-*/
-
 export const Notch: React.FC<NotchHeaderProps> = ({ text, isActive }) => {
   return (
-    <div className="relative w-full lg:w-60 h-8 bg-muted/50 rounded-3xl overflow-hidden shadow-md">
+    <div className="relative flex items-center w-full lg:w-60 h-8 bg-muted/50 rounded-3xl overflow-hidden shadow-md">
       {/* Animated text */}
       <motion.div
-        className="flex flex-row gap-1 mt-1 text-black font-medium items-center"
+        className="flex flex-row gap-1 text-black font-medium items-center"
         initial={{ x: "100%" }}
         animate={{ x: "-100%" }}
         transition={{
@@ -30,7 +26,7 @@ export const Notch: React.FC<NotchHeaderProps> = ({ text, isActive }) => {
         }}
       >
         <motion.div
-          className={`mt-1 w-2 h-2 rounded-full -mt-[1px] ${isActive ? "bg-green-500" : "bg-red-500"}`}
+          className={`w-2 h-2 rounded-full ${isActive ? "bg-green-500" : "bg-red-500"}`}
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.7, 1, 0.7],
@@ -41,7 +37,7 @@ export const Notch: React.FC<NotchHeaderProps> = ({ text, isActive }) => {
             ease: "easeInOut",
           }}
         />
-        <p className="text-primary">{text}</p>
+        <p className="text-primary whitespace-nowrap">{text}</p>
       </motion.div>
     </div>
   );
