@@ -14,11 +14,11 @@ export default function App() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Header />
-      <main className="pb-20 grid gap-20 lg:grid-cols-[1fr_3fr] lg:px-20">
+      <main className="pb-20 grid lg:gap-20 lg:grid-cols-[1fr_3fr] lg:px-20">
         <div className="w-full pt-20">
           <InfoAside />
         </div>
-        <div>
+        <div className="lg:pt-20 md:pt-0">
           <Routes>
             <Route path="/" element={<PortfolioPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
