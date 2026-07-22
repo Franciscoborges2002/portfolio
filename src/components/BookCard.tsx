@@ -36,9 +36,7 @@ export function BookCard({ book, onClick }: BookCardProps) {
           <p className="mt-1 text-sm text-white/50">{book.author}</p>
           <p className="mt-0.5 text-xs text-white/30">{book.year}</p>
         </div>
-        <Badge
-          className={`w-fit text-[11px] ${statusClassName[book.status]}`}
-        >
+        <Badge className={`w-fit text-[11px] ${statusClassName[book.status]}`}>
           {t(`books.status.${book.status}`)}
         </Badge>
       </div>
