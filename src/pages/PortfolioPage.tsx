@@ -22,7 +22,9 @@ export default function PortfolioPage() {
           <h2 className="text-2xl font-bold mt-0">{t("home.readmeTitle")}</h2>
           <Card className="">
             <CardContent className="pt-2 pb-2 space-y-2">
-              <p className="m-0">Refactor</p>
+              <p className="m-0">{t("home.bio1")}</p>
+              <p className="m-0">{t("home.bio2")}</p>
+              <p className="m-0">{t("home.bio3")}</p>
             </CardContent>
           </Card>
         </div>
