@@ -7,24 +7,13 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import type { Book } from "@/data/books";
+import { useTranslation } from "react-i18next";
 
-const statusConfig = {
-  "currently-reading": {
-    label: "Currently Reading",
-    className: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  },
-  finished: {
-    label: "Finished",
-    className: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
-  },
-  "want-to-read": {
-    label: "Want to Read",
-    className: "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
-  },
-  abandoned: {
-    label: "Abandoned",
-    className: "bg-red-500/20 text-red-400 border-red-500/30",
-  },
+const statusClassName = {
+  "currently-reading": "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  finished: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+  "want-to-read": "bg-zinc-500/20 text-zinc-400 border-zinc-500/30",
+  abandoned: "bg-red-500/20 text-red-400 border-red-500/30",
 };
 
 interface BookDetailModalProps {
@@ -38,8 +27,8 @@ export function BookDetailModal({
   open,
   onOpenChange,
 }: BookDetailModalProps) {
+  const { t } = useTranslation();
   if (!book) return null;
-  const status = statusConfig[book.status];
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -67,8 +56,10 @@ export function BookDetailModal({
               </p>
               <p className="text-xs text-muted-foreground">{book.year}</p>
             </div>
-            <Badge className={`w-fit text-[11px] ${status.className}`}>
-              {status.label}
+            <Badge
+              className={`w-fit text-[11px] ${statusClassName[book.status]}`}
+            >
+              {t(`books.status.${book.status}`)}
             </Badge>
           </div>
         </div>
