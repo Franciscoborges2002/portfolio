@@ -42,17 +42,7 @@ export function InformationComponent() {
                   @uminho
                 </a>
               </p>
-              <p className="text-muted-foreground">
-                {t("aside.working")}{" "}
-                <a
-                  href="https://www.ccg.pt/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  @CCG
-                </a>
-              </p>
+              <p className="text-muted-foreground">{t("aside.working")}</p>
             </div>
           </div>
         </CardHeader>
@@ -201,7 +191,7 @@ export function InformationComponent() {
             >
               {[
                 {
-                  period: "December 2024 - present",
+                  period: "December 2024 - June 2026",
                   role: "Backend Developer",
                   company: "@ccg",
                   url: "https://ccg.pt/",

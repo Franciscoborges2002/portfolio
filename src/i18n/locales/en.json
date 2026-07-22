@@ -6,11 +6,11 @@
     "books": "Books"
   },
   "notch": {
-    "text": "Currently Working"
+    "text": "Open to Work"
   },
   "aside": {
     "role": "Master in Engineering and Management of Information Systems",
-    "working": "Working",
+    "working": "Open to work",
     "location": "Portugal",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
@@ -75,9 +75,9 @@
   },
   "home": {
     "readmeTitle": "🙋 README.md",
-    "bio1": "My passion for technology ignited at a young age when I started to understood the essence of what a computer truly is.",
-    "bio2": "Before i got into university, I start learning programming and embarked on creating small projects and doing some automation on my daily tasks.",
-    "bio3": "Over time, these early efforts allowed me to improve my skills, progressively taking more complex projects with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to learn more.",
+    "bio1": "My passion for technology ignited at a young age when I started to understand the essence of what a computer truly is.",
+    "bio2": "Before I got into university, I started learning programming and embarked on creating small projects and doing some automation on my daily tasks.",
+    "bio3": "Over time, these early efforts allowed me to improve my skills, progressively taking on more complex projects with confidence. As an individual, I am dedicated, ambitious, and perpetually eager to learn more.",
     "highlightedProjects": "⭐ Highlighted Projects",
     "moreProjects": "More Projects",
     "articlesTitle": "📝 Articles",

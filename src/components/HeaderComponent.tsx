@@ -15,7 +15,7 @@ export function Header() {
         <div className="flex-1" />
 
         <div className="flex-1 flex justify-center">
-          <Notch text={t("notch.text")} isActive={false} />
+          <Notch text={t("notch.text")} isActive={true} />
         </div>
 
         <div className="flex-1 flex justify-end items-center gap-1">
