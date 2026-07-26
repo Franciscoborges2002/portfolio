@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { Separator } from "@/components/ui/separator";
 import { getSortedArticlesData } from "@/lib/articles";
 

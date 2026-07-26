@@ -6,12 +6,7 @@ export type TechCategory = {
 
 //Hold the icons to use
 export type LucideIconName =
-  | "Code"
-  | "Server"
-  | "Database"
-  | "Smartphone"
-  | "Palette"
-  | "Wrench";
+  "Code" | "Server" | "Database" | "Smartphone" | "Palette" | "Wrench";
 
 export type ColorKey = keyof typeof colorMap;
 
