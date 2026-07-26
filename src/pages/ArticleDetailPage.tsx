@@ -1,5 +1,5 @@
 // src/pages/ArticleDetailPage.tsx
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";

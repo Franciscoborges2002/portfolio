@@ -1,8 +1,5 @@
 export type BookStatus =
-  | "currently-reading"
-  | "finished"
-  | "want-to-read"
-  | "abandoned";
+  "currently-reading" | "finished" | "want-to-read" | "abandoned";
 
 export interface Book {
   id: string;
