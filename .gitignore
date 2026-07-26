@@ -17,6 +17,7 @@
 /build
 /out
 /dist
+/public/sitemap.xml
 
 # misc
 .DS_Store
