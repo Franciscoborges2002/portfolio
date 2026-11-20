@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 export const MarkdownViewer = ({ content }: { content: string }) => (
   <div className="prose max-w-none dark:prose-invert prose-headings:text-foreground prose-p:text-secondary-foreground prose-a:text-secondary-foreground prose-a:no-underline prose-ul:text-secondary-foreground prose-ol:text-secondary-foreground prose-strong:text-secondary-foreground prose-code:bg-muted prose-code:text-foreground prose-code:rounded prose-code:px-1 prose-code:py-0.5 prose-code:text-sm prose-code:font-mono">
@@ -13,10 +14,20 @@ export const MarkdownViewer = ({ content }: { content: string }) => (
             loading="lazy"
           />
         ),
-        a: ({ href, children }) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        a: ({ node, href, children, ...props }) => {
           const isExternal = href?.startsWith("http");
           if (!isExternal) {
-            return <a href={href}>{children}</a>;
+            const isFootnoteRef = "data-footnote-ref" in props;
+            return (
+              <a
+                href={href}
+                {...props}
+                className={isFootnoteRef ? "font-bold" : props.className}
+              >
+                {children}
+              </a>
+            );
           }
           return (
             <a
@@ -32,6 +43,12 @@ export const MarkdownViewer = ({ content }: { content: string }) => (
         },
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         h2: ({ node, ...props }) => <h2 {...props} className="scroll-mt-24" />,
+      }}
+      remarkPlugins={[remarkGfm]}
+      remarkRehypeOptions={{
+        footnoteLabel: "Sources",
+        footnoteLabelTagName: "h2",
+        footnoteBackLabel: "Back to text",
       }}
       rehypePlugins={[rehypeRaw]}
     >
