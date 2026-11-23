@@ -2,6 +2,8 @@
 
 **Live at [fborges.dev](https://fborges.dev)**
 
+[![CI](https://github.com/Franciscoborges2002/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Franciscoborges2002/portfolio/actions/workflows/ci.yml)
+
 Source code for my personal portfolio website, built with **Vite + React + TypeScript**. Showcases my projects, articles, books, experience, and skills.
 
 ---
