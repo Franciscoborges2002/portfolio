@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # ---------- runner ----------
-FROM nginx:1.27-alpine AS runner
+FROM nginx:1.29-alpine AS runner
 
 # Install wget for healthcheck
 RUN apk add --no-cache wget
