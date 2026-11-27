@@ -191,6 +191,13 @@ export function InformationComponent() {
             >
               {[
                 {
+                  period: "November 2026 - present",
+                  role: "Fullstack Developer",
+                  company: "@CJR Renewables",
+                  url: "https://www.cjr-renewables.com/",
+                  description: "",
+                },
+                {
                   period: "December 2024 - June 2026",
                   role: "Backend Developer",
                   company: "@ccg",
@@ -198,7 +205,7 @@ export function InformationComponent() {
                   description: "",
                 },
                 {
-                  period: "November 2024 - present",
+                  period: "November 2024 - November 2025",
                   role: "Mobile/Frontend Developer",
                   company: "@AIS.SC",
                   url: "https://aissc.dsi.uminho.pt/",

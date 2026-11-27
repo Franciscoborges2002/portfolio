@@ -21,8 +21,15 @@
     "education": "Education",
     "experienceItems": [
       {
+        "period": "November 2026 - present",
+        "role": "Fullstack Developer",
+        "company": "CJR Renewables",
+        "companyUrl": "https://www.cjr-renewables.com/",
+        "description": ""
+      },
+      {
         "period": "December 2024 - present",
-        "role": "Backend Developer",
+        "role": "Backend Developer & Researcher",
         "company": "ccg",
         "companyUrl": "https://ccg.pt/",
         "description": ""

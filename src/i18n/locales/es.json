@@ -21,29 +21,36 @@
     "education": "Formación",
     "experienceItems": [
       {
+        "period": "Noviembre 2026 - presente",
+        "role": "Fullstack Developer",
+        "company": "CJR Renewables",
+        "companyUrl": "https://www.cjr-renewables.com/",
+        "description": ""
+      },
+      {
         "period": "Diciembre 2024 - presente",
-        "role": "Desarrollador Backend",
+        "role": "Backend Developer & Researcher",
         "company": "ccg",
         "companyUrl": "https://ccg.pt/",
         "description": ""
       },
       {
         "period": "Noviembre 2024 - presente",
-        "role": "Desarrollador Mobile/Frontend",
+        "role": "Mobile/Frontend Developer",
         "company": "AIS.SC",
         "companyUrl": "https://aissc.dsi.uminho.pt/",
         "description": "Trabajé como desarrollador mobile y frontend principal. Lideré un equipo de 3 desarrolladores para construir la interfaz de la aplicación de eventos."
       },
       {
         "period": "Diciembre 2022 - Octubre 2023",
-        "role": "Desarrollador Backend",
+        "role": "Backend Developer",
         "company": "AIS.SC",
         "companyUrl": "https://aissc.dsi.uminho.pt/",
         "description": "Trabajé principalmente en backend, modificando, actualizando e investigando nuevas funcionalidades para el servicio."
       },
       {
         "period": "Abril 2022 - Octubre 2024",
-        "role": "ioAcademy",
+        "role": "Junior Backend Developer",
         "company": "ioTech",
         "companyUrl": "https://iotech.pt/",
         "description": "Realicé varios proyectos a cambio de formación."
